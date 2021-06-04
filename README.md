@@ -1,8 +1,17 @@
 # Curso de Sympy
 
- Por Eduardo Adame.
+![](https://img.shields.io/badge/Made%20by-Eduardo%20Adame-FA8072?style=for-the-badge) ![](https://img.shields.io/github/commit-activity/m/adamesalles/cursosympy?style=for-the-badge) ![](https://img.shields.io/github/last-commit/adamesalles/cursosympy?style=for-the-badge)
 
-![](https://img.shields.io/github/commit-activity/m/adamesalles/cursosympy?style=for-the-badge) ![](https://img.shields.io/github/last-commit/adamesalles/cursosympy?style=for-the-badge)
+Faça uma melhor leitura do repositório através do [nbviewer](https://nbviewer.jupyter.org/github/adamesalles/cursosympy/tree/main/).
+
+## Sumário
+
+0. [Conhecendo e Preparando o Ambiente](chapters/0.ipynb)
+1. [Básicos da Programação em Python](chapters/1.ipynb)
+2. [Primeiros Passos com o Sympy](chapters/2.ipynb)
+3. [Aplicações em Cálculo Diferencial e Integral](chapters/3.ipynb)
+4. [Plotando Gráficos](chapters/4.ipynb)
+5. [Extras](chapters/5.ipynb)
 
 ## Sobre
 
