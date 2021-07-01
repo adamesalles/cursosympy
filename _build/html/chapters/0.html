@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conhecendo e Preparando o Ambiente &#8212; Curso de SymPy</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Básicos da Programação em Python" href="1.html" />
+    <link rel="prev" title="Curso de Sympy" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Curso de SymPy</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Curso de Sympy
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Conhecendo e Preparando o Ambiente
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.html">
+   Básicos da Programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.html">
+   Primeiros Passos com o Sympy
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/adamesalles/cursosympy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/adamesalles/cursosympy/issues/new?title=Issue%20on%20page%20%2Fchapters/0.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/adamesalles/cursosympy/main?urlpath=tree/book/chapters/0.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escolhendo-um-ambiente">
+   Escolhendo um Ambiente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalando-o-ambiente-1a-opcao">
+   Instalando o Ambiente (1ª Opção)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#windows">
+     Windows
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux">
+     Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalando-o-ambiente-2a-opcao">
+   Instalando o Ambiente (2ª Opção)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Windows
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Linux
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-acompanhar-as-explicacoes-do-curso">
+   Como acompanhar as explicações do curso
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercicio-0">
+     Exercício 0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proximos-passos">
+   Próximos passos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="conhecendo-e-preparando-o-ambiente">
+<h1>Conhecendo e Preparando o Ambiente<a class="headerlink" href="#conhecendo-e-preparando-o-ambiente" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<p>Esse curso busca capacitar seus estudantes no tocante à biblioteca Sympy, do Python. Portanto, há a necessidade do conhecimento do próprio Python base. Com isso, o curso foi dividido em uma ordem lógica de aprendizagem para que o aluno consiga aprender continuamente, sem grandes “degraus” entre os assuntos. O capítulo 1 é uma introdução ao Python base, o que é suficiente para esse curso.</p>
+<p>Neste capítulo, temos como objetivo fazer a instalação e configuração do nosso ambiente de desenvolvimento. Se você já é desenvolvedor Python, não acredito que seja necessária sua mudança ao ambiente que será indicado a esse curso. Mas, caso seja iniciante, recomendo que siga as instruções.</p>
+</div>
+<div class="section" id="escolhendo-um-ambiente">
+<h2>Escolhendo um Ambiente<a class="headerlink" href="#escolhendo-um-ambiente" title="Permalink to this headline">¶</a></h2>
+<p>Há duas opções para seguir esse curso:</p>
+<ol class="simple">
+<li><p>Na forma de Notebooks</p></li>
+<li><p>Na forma de Scripts</p></li>
+</ol>
+<p>No curso, serão utilizado notebooks. Mais especificamente, Jupyter Notebooks, através do ambiente JupyterHub. Mas, não se preocupe, ambas as opções serão eficientes. Embora a utilização do Sympy seja regularmente associada ao desenvolvimento em Jupyter.</p>
+<p>Na primeira opção, você só terá que instalar um pacote que virá com tudo incluso (IDE, Pacotes, etc.), e sua programação será mais parecida como um caderno. Onde você pode escrever, colocar imagens, matemática, e separar o código em blocos. Contudo, ele é mais pesado e menos flexível.</p>
+<p>Na segunda opção, você terá um ambiente mais semelhante à programação tradicional. Linha após linha e comentários. Você terá que instalar o Python puro, versionar/atualizar seus módulos manualmente (o que é mais trabalhoso, mas dá mais autonomia) e utilizar um Editor de Código/IDE.</p>
+<p>Caso não tenha entendido o que fora explicado acima, acredito que, nesse momento inicial, a primeira opção é a melhor para você. Contudo, ela não te ajudará a migrar para outra linguagem de programação no futuro, caso queira ou seja necessário. (Isso não é um problema, ao meu ver).</p>
+</div>
+<div class="section" id="instalando-o-ambiente-1a-opcao">
+<h2>Instalando o Ambiente (1ª Opção)<a class="headerlink" href="#instalando-o-ambiente-1a-opcao" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>No Windows, a instalação é bem simples, utilizaremos o Anaconda. Para isso, baixe o <a class="reference external" href="https://www.anaconda.com/download/#windows">instalador do Anaconda</a>.</p>
+<p>Prossiga a instalação normalmente. Contudo, preste atenção às duas caixas de marcação (checkboxes) que perguntam sobre adicionar o Anaconda ao PATH e torná-lo padrão. Ambas as opções devem estar marcadas.</p>
+<p>Se ele oferecer a instalação de algum outro IDE (como o PyCharm), você pode negar.</p>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>A instalação no Linux é um pouco mais complicada. Mas, se você utiliza Linux, possivelmente consegue instalar com certa facilidade.</p>
+<p>Verifique as dependências da sua distribuição nesse link: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">https://docs.anaconda.com/anaconda/install/linux/</a></p>
+<p>E depois siga a instalação com o <a class="reference external" href="https://www.anaconda.com/download/#linux">instalador para Linux</a>. Ele é um instalador em Bash, então recomendo que utilize os comandos prescritos no site do Anaconda.</p>
+</div>
+</div>
+<div class="section" id="instalando-o-ambiente-2a-opcao">
+<h2>Instalando o Ambiente (2ª Opção)<a class="headerlink" href="#instalando-o-ambiente-2a-opcao" title="Permalink to this headline">¶</a></h2>
+<p>Como dito na seção anterior, para essa opção temos que instalar 2 programas, além dos pacotes separadamente.</p>
+<div class="section" id="id1">
+<h3>Windows<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>No Windows, você terá que baixar e instalar o Python que está disponível nesse link: <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+<p>A instalação é bem simples, você só deve se certificar que ele será adicionado ao PATH e que o <code class="docutils literal notranslate"><span class="pre">pip</span></code> será instalado. (São duas caixinhas de marcar que devem aparecer)</p>
+<p>Para testar se a instalação deu certo, abra um prompt de comando (basta inserir ou cmd ou powershell no menu de pesquisa) e digite:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py --version
+</pre></div>
+</div>
+<p>Deve aparecer a versão do Python que você instalou. Caso isso não ocorra, repita o procedimento e veja se fez tudo corretamente.</p>
+<p>Também confirme se o pip foi instalado corretamente:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip --version
+</pre></div>
+</div>
+<p>Após isso, você deve escolher um editor. A minha recomendação é o <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>Mas você pode utilizar outros como o <a class="reference external" href="https://atom.io/">Atom</a> ou <a class="reference external" href="https://www.jetbrains.com/pt-br/pycharm/download/">PyCharm</a>.</p>
+<p>A instalação de todos é bem simples. Ao abri-los, certifique-se se é necessário instalar uma extensão para suporte ao Python. Caso for, instale-a.</p>
+</div>
+<div class="section" id="id2">
+<h3>Linux<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>No Linux, a imensa maioria das distribuições já vêm com o Python instalado e disponível. A única diferença é que algumas adotam o nome <code class="docutils literal notranslate"><span class="pre">python3</span></code> e outras somente <code class="docutils literal notranslate"><span class="pre">python</span></code>.</p>
+<p>Para isso, teste no terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python --version
+python3 --version
+</pre></div>
+</div>
+<p>E comece a usar o que tem a versão mais atual.</p>
+<p>Também certifique-se se você tem o <code class="docutils literal notranslate"><span class="pre">pip</span></code> instalado</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip --version
+pip3 --version
+</pre></div>
+</div>
+<p>Caso não tenha, veja como instalá-lo em sua distribuição.</p>
+<p>Assim como no Windows, você deve instalar um editor. As minhas recomendações são as mesmas para o Windows. Ou seja, primeiramente o <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>. E depois ou o <a class="reference external" href="https://atom.io/">Atom</a> ou o <a class="reference external" href="https://www.jetbrains.com/pt-br/pycharm/download/">PyCharm</a>.</p>
+<p>Todos têm versão para Linux e a instalação deve ser até mais simples que para windows. No caso do Visual Studio Code, recomendo que utilize a versão flatpak ou snap.</p>
+</div>
+</div>
+<div class="section" id="como-acompanhar-as-explicacoes-do-curso">
+<h2>Como acompanhar as explicações do curso<a class="headerlink" href="#como-acompanhar-as-explicacoes-do-curso" title="Permalink to this headline">¶</a></h2>
+<p>O nosso curso será baseado em Jupyter Notebooks, uma forma de programar em blocos. Esses blocos podem ser tanto de código como de texto.</p>
+<p>No caso, a primeira opção de ambiente lhe entregará um ambiente muito parecido com o que eu utilizei para escrever os meus Notebooks. Para a segunda, acredito que será mais difícil. Principalmente, pela ausência de alguns pacotes e softwares que vêm com o Anaconda. Mas, decidi incluí-la, pois há pessoas que precisam somente de uma consulta rápida, e possivelmente já têm seu ambiente de desenvolvimento, sendo em Anaconda ou não.</p>
+<p>Então, para a primeira opção, você deverá abrir o “Anaconda Navigator”. Esse software servirá como gerenciador de pacotes e dos serviços.</p>
+<p>Como dito anteriormente, utilizaremos Jupyter Notebooks. Então basta clicar em “Launch” no card do Jupyter Notebook.</p>
+<p>Ele abrirá um navegador de arquivos no navegador, semelhante a um site. Basta escolher uma pasta onde gostaria de criar seus notebooks, e criá-los a partir do botão “New” e então escolha o <em>Python 3</em>.</p>
+<p>O curso não tem como foco específico ensinar o uso desse ambiente, uma vez que ele é bem simples. Basicamente, você deverá criar blocos (que costumamos chamar de <em>chunks</em>) de forma a organizar o entendimento e a saída do seu código. Ao escolher a opção “Code” para seu bloco, você deverá escrever códigos Python nele. No caso de “Markdown”, você deverá escrever texto de acordo com a sintaxe da linguagem de marcação Markdown.</p>
+<p>Essa sintaxe é bem simples, dê uma olhada nessa “tabela de cola”: <a class="reference external" href="https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md">https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md</a></p>
+<p>Para qualquer tipo de bloco, basta segurar a tecla Ctrl e apertar Enter para compilá-lo.</p>
+<div class="section" id="exercicio-0">
+<h3>Exercício 0<a class="headerlink" href="#exercicio-0" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Crie um chunk de markdown e escreva um título com o texto “Olá mundo em Python”.</p></li>
+<li><p>Abaixo desse chunk, crie outro com o código <code class="docutils literal notranslate"><span class="pre">print('Olá</span> <span class="pre">mundo')</span></code>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="proximos-passos">
+<h2>Próximos passos<a class="headerlink" href="#proximos-passos" title="Permalink to this headline">¶</a></h2>
+<p>Embora esse capítulo não tenha tido um bloco sequer de código, acredito que agora estão preparados para aprender os básicos de Python</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Curso de Sympy</a>
+    <a class='right-next' id="next-link" href="1.html" title="next page">Básicos da Programação em Python</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Eduardo Adame Salles<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
