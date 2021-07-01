@@ -233,13 +233,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conceitos-e-comandos-basicos">
-   1.3. Conceitos e comandos básicos
+  <a class="reference internal nav-link" href="#trabalhando-com-expressoes-matematicas">
+   1.3. Trabalhando com expressões matemáticas
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equacoes">
-     1.3.1. Equações
+     Equações
     </a>
    </li>
   </ul>
@@ -280,8 +280,8 @@
 </div>
 <p>O <code class="docutils literal notranslate"><span class="pre">*</span></code> significa que estamos importando o módulo por completo.</p>
 </div>
-<div class="section" id="conceitos-e-comandos-basicos">
-<h2><span class="section-number">1.3. </span>Conceitos e comandos básicos<a class="headerlink" href="#conceitos-e-comandos-basicos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trabalhando-com-expressoes-matematicas">
+<h2><span class="section-number">1.3. </span>Trabalhando com expressões matemáticas<a class="headerlink" href="#trabalhando-com-expressoes-matematicas" title="Permalink to this headline">¶</a></h2>
 <p>Como o <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> tem como objetivo o cálculo simbólico, tudo é baseado a partir dos simbólos. Ou seja, as nossas querídas variáveis (como <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, e <span class="math notranslate nohighlight">\(z\)</span>) sendo interpretadas com suas propriedades matemáticas.</p>
 <p>Portanto, para utilizá-las, precisamos criar seus símbolos. Por enquanto, vamos utilizar somente o <span class="math notranslate nohighlight">\(x\)</span>. Então, para o <code class="docutils literal notranslate"><span class="pre">x</span></code> do Python significar a variável <span class="math notranslate nohighlight">\(x\)</span> fazemos:</p>
 <div class="cell docutils container">
@@ -363,8 +363,118 @@
 \[\displaystyle 0\]</div>
 </div>
 </div>
+<p>Se tivermos uma expressão numérica não-inteira e quisermos achar a solução em um ponto flutuante (<code class="docutils literal notranslate"><span class="pre">float</span></code>), podemos usar o método <code class="docutils literal notranslate"><span class="pre">evalf()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_sqrt</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">my_sqrt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sqrt{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_sqrt</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2.82842712474619\]</div>
+</div>
+</div>
+<p>Como viu acima, possivelmente há uma função do <code class="docutils literal notranslate"><span class="pre">SymPy</span></code> que represente uma operação ou função matemática. Por exemplo, temos <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code>, <code class="docutils literal notranslate"><span class="pre">log()</span></code>, <code class="docutils literal notranslate"><span class="pre">exp()</span></code>, <code class="docutils literal notranslate"><span class="pre">sin()</span></code> e etc. Quando sentir necessidade de utilizar uma dessa, tente antes de consultar a documentação. Caso não consiga “adivinhar”, faça uma consulta que, com toda certeza, haverá uma função que te atenderá.</p>
+<p>Existem algumas funções que “fazem Álgebra” por si só. Veja alguns exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simplifica</span>
+<span class="n">simplify</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x + 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fatora</span>
+<span class="n">factor</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x - 1}{x}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expande</span>
+<span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{6} + 9 x^{5} + 27 x^{4} + 27 x^{3}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupa potências de uma variável (que vai como segundo parâmetro)</span>
+<span class="n">collect</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span><span class="mi">20</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{3} - x^{2} + 5 x - 18\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Separa fração em frações parciais</span>
+<span class="n">apart</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">18</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{11}{3 \left(x + 3\right)} + \frac{14}{3 x} - \frac{6}{x^{2}}\]</div>
+</div>
+</div>
+<p>Além desses principais, ainda há <code class="docutils literal notranslate"><span class="pre">trigsimp()</span></code> e <code class="docutils literal notranslate"><span class="pre">expand_trig()</span></code> que simplificam e expandem funções trigonométricas (a partir das identidades de adição de arco). E outras que fazem o mesmo para potências, logaritmos e outros tipos de funções. Nesse caso, acho que vale a pena dar uma olhada na documentação. Elas todas são bem parecidas.</p>
+<p>Finalizando esse tópico inicial, temos como substituir uma função em termos de outra. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">cos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \cos{\left(x - \frac{\pi}{2} \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{3 \log{\left(x \right)}}\]</div>
+</div>
+</div>
 <div class="section" id="equacoes">
-<h3><span class="section-number">1.3.1. </span>Equações<a class="headerlink" href="#equacoes" title="Permalink to this headline">¶</a></h3>
+<h3>Equações<a class="headerlink" href="#equacoes" title="Permalink to this headline">¶</a></h3>
 <p>Ok, nós vimos como utilizar expressões. Mas, como tratamos equações? Como vimos no capítulo anterior <code class="docutils literal notranslate"><span class="pre">=</span></code> significa atribuição e <code class="docutils literal notranslate"><span class="pre">==</span></code> é uma operação booleana (ou seja, recebemos <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
 <p>Para equações criamos uma classe <code class="docutils literal notranslate"><span class="pre">Eq()</span></code>. Não se preocupe com a nomenclatura, é só uma forma de criar um objeto do tipo <code class="docutils literal notranslate"><span class="pre">Eq</span></code>. Para criar esse objeto, passamos dois argumentos: cada lado da equação, respectivamente. Veja:</p>
 <div class="cell docutils container">
@@ -389,6 +499,59 @@
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle \left[ - \sqrt{2}, \  \sqrt{2}\right]\]</div>
+</div>
+</div>
+<p>Como verificar igualdade entre duas expressões? O <code class="docutils literal notranslate"><span class="pre">==</span></code> só servirá para expressões identicas (não somente em valor, mas também nos termos expressos). Para isso, utilizamos o método <code class="docutils literal notranslate"><span class="pre">equals()</span></code>. Veja:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr_1</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr_2</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como veremos abaixo, pelo <code class="docutils literal notranslate"><span class="pre">==</span></code> as expressões seriam diferentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr_1</span> <span class="o">==</span> <span class="n">expr_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos pelo método <code class="docutils literal notranslate"><span class="pre">equals()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr_1</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">expr_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos visualizar a igualdade da seguinte forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Eq</span><span class="p">(</span><span class="n">expr_1</span><span class="p">,</span><span class="n">expr_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin^{2}{\left(x \right)} = 0.5 - 0.5 \cos{\left(2 x \right)}\]</div>
 </div>
 </div>
 </div>

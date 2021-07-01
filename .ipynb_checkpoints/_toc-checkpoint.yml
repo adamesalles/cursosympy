@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 defaults:  # The defaults key will be applied to all chapters and sub-sections
-  numbered: True
+  numbered: 2
 parts:
   - caption: Introdução ao Python
     chapters:

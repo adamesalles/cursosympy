@@ -30,7 +30,7 @@ init_printing(use_unicode=True, use_latex='mathjax') # Para imprimir LaTeX
 
 # O `*` significa que estamos importando o módulo por completo.
 
-# ## Conceitos e comandos básicos
+# ## Trabalhando com expressões matemáticas
 # 
 # Como o `Sympy` tem como objetivo o cálculo simbólico, tudo é baseado a partir dos simbólos. Ou seja, as nossas querídas variáveis (como $x$, $y$, e $z$) sendo interpretadas com suas propriedades matemáticas. 
 # 
@@ -89,13 +89,83 @@ expr.subs(x,2) # Se y = expr, esse é o valor de y quando x = 2.
 expr.subs(x,1)
 
 
+# Se tivermos uma expressão numérica não-inteira e quisermos achar a solução em um ponto flutuante (`float`), podemos usar o método `evalf()`.
+
+# In[9]:
+
+
+my_sqrt = sqrt(8)
+my_sqrt
+
+
+# In[10]:
+
+
+my_sqrt.evalf()
+
+
+# Como viu acima, possivelmente há uma função do `SymPy` que represente uma operação ou função matemática. Por exemplo, temos `sqrt()`, `log()`, `exp()`, `sin()` e etc. Quando sentir necessidade de utilizar uma dessa, tente antes de consultar a documentação. Caso não consiga "adivinhar", faça uma consulta que, com toda certeza, haverá uma função que te atenderá.
+
+# Existem algumas funções que "fazem Álgebra" por si só. Veja alguns exemplos:
+
+# In[11]:
+
+
+# Simplifica
+simplify((x**2 + x)/x) 
+
+
+# In[12]:
+
+
+# Fatora
+factor(1-1/x)
+
+
+# In[13]:
+
+
+# Expande
+expand((x**2 + 3*x)**3)
+
+
+# In[14]:
+
+
+# Agrupa potências de uma variável (que vai como segundo parâmetro)
+collect(x**2 + 4*x - 2*x**2 + x -20 + x**3 + 2, x)
+
+
+# In[15]:
+
+
+# Separa fração em frações parciais
+apart((x**2 + 8*x-18)/(x**3 + 3*x**2))
+
+
+# Além desses principais, ainda há `trigsimp()` e `expand_trig()` que simplificam e expandem funções trigonométricas (a partir das identidades de adição de arco). E outras que fazem o mesmo para potências, logaritmos e outros tipos de funções. Nesse caso, acho que vale a pena dar uma olhada na documentação. Elas todas são bem parecidas.
+# 
+# Finalizando esse tópico inicial, temos como substituir uma função em termos de outra. Por exemplo:
+
+# In[16]:
+
+
+sin(x).rewrite(cos)
+
+
+# In[17]:
+
+
+(x**3).rewrite(exp)
+
+
 # ### Equações
 # 
 # Ok, nós vimos como utilizar expressões. Mas, como tratamos equações? Como vimos no capítulo anterior `=` significa atribuição e `==` é uma operação booleana (ou seja, recebemos `True` ou `False`).
 # 
 # Para equações criamos uma classe `Eq()`. Não se preocupe com a nomenclatura, é só uma forma de criar um objeto do tipo `Eq`. Para criar esse objeto, passamos dois argumentos: cada lado da equação, respectivamente. Veja:
 
-# In[9]:
+# In[18]:
 
 
 eq = Eq(x**2, 2)
@@ -104,8 +174,46 @@ eq
 
 # Podemos utilizar o mesmo método para encontrar suas raízes.
 
-# In[10]:
+# In[19]:
 
 
 solve(eq,x)
+
+
+# Como verificar igualdade entre duas expressões? O `==` só servirá para expressões identicas (não somente em valor, mas também nos termos expressos). Para isso, utilizamos o método `equals()`. Veja: 
+
+# In[20]:
+
+
+expr_1 = sin(x)**2
+
+
+# In[21]:
+
+
+expr_2 = .5*(1 -cos(2*x))
+
+
+# Como veremos abaixo, pelo `==` as expressões seriam diferentes.
+
+# In[22]:
+
+
+expr_1 == expr_2
+
+
+# Vejamos pelo método `equals()`:
+
+# In[23]:
+
+
+expr_1.equals(expr_2)
+
+
+# Podemos visualizar a igualdade da seguinte forma:
+
+# In[24]:
+
+
+Eq(expr_1,expr_2)
 
