@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Primeiros Passos com o Sympy &#8212; Curso de SymPy</title>
+    <title>1. Primeiros Passos com o Sympy &#8212; Curso de SymPy</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -72,7 +72,7 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logosd.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Curso de SymPy</h1>
@@ -90,7 +90,12 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<p class="caption">
+ <span class="caption-text">
+  Introdução ao Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.html">
    1. Conhecendo e Preparando o Ambiente
@@ -101,9 +106,16 @@
    2. Básicos da Programação em Python
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Utilizando o SymPy
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Primeiros Passos com o Sympy
+   1. Primeiros Passos com o Sympy
   </a>
  </li>
 </ul>
@@ -188,7 +200,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/adamesalles/cursosympy/main?urlpath=tree/./chapters/3.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/adamesalles/cursosympy/main?urlpath=tree/chapters/3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -212,22 +224,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instalacao">
-   3.1. Instalação
+   1.1. Instalação
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#carregando-o-modulo">
-   3.2. Carregando o Módulo
+   1.2. Carregando o Módulo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conceitos-e-comandos-basicos">
-   3.3. Conceitos e comandos básicos
+   1.3. Conceitos e comandos básicos
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equacoes">
-     3.3.1. Equações
+     1.3.1. Equações
     </a>
    </li>
   </ul>
@@ -244,9 +256,9 @@
               <div>
                 
   <div class="section" id="primeiros-passos-com-o-sympy">
-<h1><span class="section-number">3. </span>Primeiros Passos com o Sympy<a class="headerlink" href="#primeiros-passos-com-o-sympy" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Primeiros Passos com o Sympy<a class="headerlink" href="#primeiros-passos-com-o-sympy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="instalacao">
-<h2><span class="section-number">3.1. </span>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Instalação<a class="headerlink" href="#instalacao" title="Permalink to this headline">¶</a></h2>
 <p>Você possivelmente deve estar se perguntando como instalar o <code class="docutils literal notranslate"><span class="pre">Sympy</span></code>. Se você já utilizou algum outro módulo em Python, possivelmente imaginou em instalá-lo utilizando o <code class="docutils literal notranslate"><span class="pre">pip</span></code> (software que pedimos que garantisse sua sua instalação no capítulo 0).</p>
 <p>Contudo, se você utiliza está utilizando notebooks com o Anaconda (nossa recomendação para esse módulo), o <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> já está instalado, basta carregá-lo.</p>
 <p>Caso esteja desenvolvendo em outro ambiente, uma forma de instalar é com o pip, por exemplo:</p>
@@ -255,7 +267,7 @@
 </div>
 </div>
 <div class="section" id="carregando-o-modulo">
-<h2><span class="section-number">3.2. </span>Carregando o Módulo<a class="headerlink" href="#carregando-o-modulo" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Carregando o Módulo<a class="headerlink" href="#carregando-o-modulo" title="Permalink to this headline">¶</a></h2>
 <p>Para utilizar os comandos do <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> de forma nativa em nossos scripts, precisamos importá-lo globalmente. Para isso utilizamos as palavras-chave <code class="docutils literal notranslate"><span class="pre">import</span></code> e <code class="docutils literal notranslate"><span class="pre">from</span></code>. Isso não foi abordado no capítulo anterior devido a sua complexidade, mas essa é uma forma de importar módulos em Python.</p>
 <p>Portanto, basta criar e executar a seguinte <em>chunk</em>:</p>
 <div class="cell docutils container">
@@ -269,7 +281,7 @@
 <p>O <code class="docutils literal notranslate"><span class="pre">*</span></code> significa que estamos importando o módulo por completo.</p>
 </div>
 <div class="section" id="conceitos-e-comandos-basicos">
-<h2><span class="section-number">3.3. </span>Conceitos e comandos básicos<a class="headerlink" href="#conceitos-e-comandos-basicos" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Conceitos e comandos básicos<a class="headerlink" href="#conceitos-e-comandos-basicos" title="Permalink to this headline">¶</a></h2>
 <p>Como o <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> tem como objetivo o cálculo simbólico, tudo é baseado a partir dos simbólos. Ou seja, as nossas querídas variáveis (como <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, e <span class="math notranslate nohighlight">\(z\)</span>) sendo interpretadas com suas propriedades matemáticas.</p>
 <p>Portanto, para utilizá-las, precisamos criar seus símbolos. Por enquanto, vamos utilizar somente o <span class="math notranslate nohighlight">\(x\)</span>. Então, para o <code class="docutils literal notranslate"><span class="pre">x</span></code> do Python significar a variável <span class="math notranslate nohighlight">\(x\)</span> fazemos:</p>
 <div class="cell docutils container">
@@ -352,7 +364,7 @@
 </div>
 </div>
 <div class="section" id="equacoes">
-<h3><span class="section-number">3.3.1. </span>Equações<a class="headerlink" href="#equacoes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>Equações<a class="headerlink" href="#equacoes" title="Permalink to this headline">¶</a></h3>
 <p>Ok, nós vimos como utilizar expressões. Mas, como tratamos equações? Como vimos no capítulo anterior <code class="docutils literal notranslate"><span class="pre">=</span></code> significa atribuição e <code class="docutils literal notranslate"><span class="pre">==</span></code> é uma operação booleana (ou seja, recebemos <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
 <p>Para equações criamos uma classe <code class="docutils literal notranslate"><span class="pre">Eq()</span></code>. Não se preocupe com a nomenclatura, é só uma forma de criar um objeto do tipo <code class="docutils literal notranslate"><span class="pre">Eq</span></code>. Para criar esse objeto, passamos dois argumentos: cada lado da equação, respectivamente. Veja:</p>
 <div class="cell docutils container">
