@@ -13,9 +13,3 @@ git commit -m 'mensagem'
 git push
 ghp-import -n -p -f _build/html
 ```
-
-Ou utilizando meu script em `sh`
-
-```bash
-sh build.sh 'mensagem'
-```

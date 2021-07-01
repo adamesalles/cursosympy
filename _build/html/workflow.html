@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso de Sympy &#8212; Curso de SymPy</title>
+    <title>Como trabalhar na produção da apostila &#8212; Curso de SymPy</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -144,7 +144,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/workflow.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -164,7 +164,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/adamesalles/cursosympy/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/adamesalles/cursosympy/issues/new?title=Issue%20on%20page%20%2Fworkflow.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -191,18 +191,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sumario">
-   Sumário
+  <a class="reference internal nav-link" href="#requisitos">
+   Requisitos
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sobre">
-   Sobre
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#licenca">
-   Licença
+  <a class="reference internal nav-link" href="#como-fazer-o-deploy">
+   Como fazer o deploy
   </a>
  </li>
 </ul>
@@ -216,34 +211,21 @@
         
               <div>
                 
-  <div class="section" id="curso-de-sympy">
-<h1>Curso de Sympy<a class="headerlink" href="#curso-de-sympy" title="Permalink to this headline">¶</a></h1>
-<p><img alt="" src="https://img.shields.io/badge/Made%20by-Eduardo%20Adame-FA8072?style=for-the-badge" /> <img alt="" src="https://img.shields.io/github/commit-activity/m/adamesalles/cursosympy?style=for-the-badge" /> <img alt="" src="https://img.shields.io/github/last-commit/adamesalles/cursosympy?style=for-the-badge" /></p>
-<p>Faça uma melhor leitura do repositório através do <a class="reference external" href="https://nbviewer.jupyter.org/github/adamesalles/cursosympy/tree/main/">nbviewer</a>.</p>
-<div class="section" id="sumario">
-<h2>Sumário<a class="headerlink" href="#sumario" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p><a class="reference internal" href="chapters/1.html"><span class="doc std std-doc">Conhecendo e Preparando o Ambiente</span></a></p></li>
-<li><p><a class="reference internal" href="chapters/2.html"><span class="doc std std-doc">Básicos da Programação em Python</span></a></p></li>
-<li><p><a class="reference internal" href="chapters/3.html"><span class="doc std std-doc">Primeiros Passos com o Sympy</span></a></p></li>
-<li><p><a class="reference internal" href="chapters/4.html"><span class="doc std std-doc">Aplicações em Cálculo Diferencial e Integral</span></a></p></li>
-<li><p><a class="reference internal" href="chapters/5.html"><span class="doc std std-doc">Plotando Gráficos</span></a></p></li>
-<li><p><a class="reference internal" href="chapters/6.html"><span class="doc std std-doc">Extras</span></a></p></li>
-</ol>
+  <div class="section" id="como-trabalhar-na-producao-da-apostila">
+<h1>Como trabalhar na produção da apostila<a class="headerlink" href="#como-trabalhar-na-producao-da-apostila" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requisitos">
+<h2>Requisitos<a class="headerlink" href="#requisitos" title="Permalink to this headline">¶</a></h2>
+<p>Ter o <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> e o <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> também. Ambos são instaláveis pelo <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
 </div>
-<div class="section" id="sobre">
-<h2>Sobre<a class="headerlink" href="#sobre" title="Permalink to this headline">¶</a></h2>
-<p>Esse curso busca ser uma porta de entrada do aluno de Engenharia à programação, mais especificamente, programação com Python.</p>
-<p>Contudo, a grande diferença que estou buscando trazer é indroduzi-lo direto à aplicação. Ou seja, com uma biblioteca que pode ser útil para ele em seus estudos.</p>
-<p>A biblioteca Sympy é muito poderosa. Não só no cálculo simbólico, mas também no numérico. Ou seja, ela é capaz de calcular Integrais (indefinidas, definidas, impróprias, etc.), Derivadas, Limites e tudo que há de bom, com extrema facilidade.</p>
-<p>Além disso, seu uso com o plot de gráficos e com geometria é incrível.</p>
-<p>No final, esse módulo acaba sendo um substituto programático ao Matlab, Wolfram Mathematica, Maple, e outros softwares pagos. Além de ser um bom auxiliar aos estudos com Geogebra.</p>
-<hr class="docutils" />
-<p>A ideia principal é utilizar esse repositório como curso, com sua organização pensada para que se aprenda somente com ele. Mas, assim que eu entender que o curso está “100%”, pretendo distribuí-lo em versões pdf/html. E ir atualizando-o à medida que o repositório vá se atualizando.</p>
+<div class="section" id="como-fazer-o-deploy">
+<h2>Como fazer o deploy<a class="headerlink" href="#como-fazer-o-deploy" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb build --all .
+git add .
+git commit -m <span class="s1">&#39;mensagem&#39;</span>
+git push
+ghp-import -n -p -f _build/html
+</pre></div>
 </div>
-<div class="section" id="licenca">
-<h2>Licença<a class="headerlink" href="#licenca" title="Permalink to this headline">¶</a></h2>
-<p>Embora a intenção seja distribuir o curso para os alunos do CEFET, ele estará disponível no Github para qualquer um ler e contribuir, alterar e/ou redistribuir. Para isso, a licença GNU GPLv3 foi escolhida para que possam ter liberdade nesses assuntos, e proteger o código de distribuições não <em>open-source</em>.</p>
 </div>
 </div>
 

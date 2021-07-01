@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Plotando Gráficos
+# # Aplicações em Cálculo Diferencial e Integral
