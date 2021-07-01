@@ -1,6 +1,9 @@
 # Curso de Sympy
 
 
+```{tableofcontents}
+```
+
 ## Sobre
 
 Esse curso busca ser uma porta de entrada do aluno de Engenharia à programação, mais especificamente, programação com Python.
