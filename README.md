@@ -6,12 +6,12 @@ Faça uma melhor leitura do repositório através do [nbviewer](https://nbviewer
 
 ## Sumário
 
-0. [Conhecendo e Preparando o Ambiente](chapters/0.ipynb)
-1. [Básicos da Programação em Python](chapters/1.ipynb)
-2. [Primeiros Passos com o Sympy](chapters/2.ipynb)
-3. [Aplicações em Cálculo Diferencial e Integral](chapters/3.ipynb)
-4. [Plotando Gráficos](chapters/4.ipynb)
-5. [Extras](chapters/5.ipynb)
+1. [Conhecendo e Preparando o Ambiente](chapters/1.ipynb)
+2. [Básicos da Programação em Python](chapters/2.ipynb)
+3. [Primeiros Passos com o Sympy](chapters/3.ipynb)
+4. [Aplicações em Cálculo Diferencial e Integral](chapters/4.ipynb)
+5. [Plotando Gráficos](chapters/5.ipynb)
+6. [Extras](chapters/6.ipynb)
 
 ## Sobre
 

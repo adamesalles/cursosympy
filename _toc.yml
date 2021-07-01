@@ -5,7 +5,10 @@ format: jb-book
 root: intro
 defaults:  # The defaults key will be applied to all chapters and sub-sections
   numbered: True
-chapters:
-- file: chapters/0
-- file: chapters/1
-- file: chapters/2
+- part: Introdução ao Python
+    chapters:
+    - file: chapters/1
+    - file: chapters/2
+- part: Utilizando o SymPy
+    chapters:
+    - file: chapters/3
