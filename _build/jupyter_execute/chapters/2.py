@@ -25,7 +25,7 @@
 
 
 from sympy import *
-init_printing(use_unicode=True) # Para imprimir LaTeX
+init_printing(use_unicode=True, use_latex='mathjax') # Para imprimir LaTeX
 
 
 # O `*` significa que estamos importando o módulo por completo.
