@@ -67,6 +67,26 @@ solve(x**2 - 4*x + 3, x)
 solve(sqrt(x) - (x/2),x)
 
 
+# Inclusive, caso queira uma resposta como costumamos escrever no papel, ou seja, em forma de conjunto e suas condições, podemos utilizar o `solveset()`. A maior diferença é que ele pode receber o conjunto numérico onde você quer trabalhar através do parâmetro `domain`. Na maioria das vezes podemos utilizar `domain=S.Reals` ou `domain=S.Complexes`.
+
+# In[195]:
+
+
+solveset(x**2 - 4*x  +20,x, domain=S.Reals)
+
+
+# In[196]:
+
+
+solveset(x**2 - 4*x  +20,x, domain=S.Complexes)
+
+
+# In[209]:
+
+
+solveset(tan(x), x, domain=S.Reals)
+
+
 # Vamos criar uma variável para armazenar essa primeira expressão para mostrar outros exemplos
 
 # In[6]:
@@ -180,6 +200,8 @@ eq
 solve(eq,x)
 
 
+# ### Igualdade
+# 
 # Como verificar igualdade entre duas expressões? O `==` só servirá para expressões identicas (não somente em valor, mas também nos termos expressos). Para isso, utilizamos o método `equals()`. Veja: 
 
 # In[20]:
@@ -217,3 +239,78 @@ expr_1.equals(expr_2)
 
 Eq(expr_1,expr_2)
 
+
+# ### Sistemas de Equações
+# 
+# Podemos, também utilizando `solve()` encontrar as soluções de um sistema de equações. Basta passar uma lista com as equações como parâmetro.
+
+# In[210]:
+
+
+y, z = symbols('y z') # Criando o y simbólico
+Eqs = []
+Eqs.append(Eq(3*x - 3*y, 20))
+Eqs.append(Eq(-7*x + 9*y, -10))
+solve(Eqs, x, y)
+
+
+# Caso esteja tentando resolver um sistema linear (como o acima), é possível utilizar o `linsolve()`.
+
+# In[176]:
+
+
+linsolve(Eqs, x, y)
+
+
+# In[215]:
+
+
+Eqs = []
+Eqs.append(Eq(3*x - 3*y + 2*z, 20))
+Eqs.append(Eq(-7*x + 9*y -4*z, -10))
+Eqs.append(Eq(-7*x + 9*y + 5*z, 40))
+linsolve(Eqs, x, y,z)
+
+
+# In[221]:
+
+
+Eqs = []
+Eqs.append(Eq(x**2 + y**2, 18)) #  Elipse de centro (0,0) e R^2 = 18
+Eqs.append(Eq(x, y)) # Reta identidade
+nonlinsolve(Eqs, x, y) # Sistema não-linear (solve também serve). No nosso caso, 2 pontos de intersecção.
+
+
+# ## Exercícios
+# 
+# Utilizando o que aprendeu nesse capítulo, tente resolver os seguintes exercícios:
+# 
+# 1. Encontre as raízes de cada uma das expressões abaixo. Depois encontre um par $(x,y)$ para cada:
+# 
+# $$x^3 - 8x^2 + 4x + 3 $$
+# 
+# $$\sin(x) + 2\cos(x)$$
+# 
+# $$\log\left|\dfrac{x^2 - x}{2}\right|$$
+# 
+# $$e^{-x^3 + 5x^2 -x} -1$$
+# 
+# 2. Encontre as soluções das equações abaixo:
+# 
+# $$x^4 - 4x^3 + x^2 - 30 = -x^2 + x - 40$$
+# 
+# $$2^{x^2 -x} = 3^x$$
+# 
+# $$\log\left|x^3 - 2x^2 +x\right| = \log\left|x^2 + 6x\right|$$
+# 
+# 3. Verifique se as igualdades são verdadeiras:
+# 
+# $$\Gamma\left(\dfrac{3}{2}\right) = \left(\dfrac{1}{2}\right)! = \dfrac{\sqrt{\pi}}{2}$$
+# 
+# $$\sin(2x^2) - \cos(x^2 +x) = \sin{\left(x \right)} \sin{\left(x^{2} \right)} + 2 \sin{\left(x^{2} \right)} \cos{\left(x^{2} \right)} - \cos{\left(x \right)} \cos{\left(x^{2} \right)}$$
+# 
+# $$(x^2 -3x)(2x^4 + x^3 - x)(-4x^2)= 8 x^{8} + 20 x^{7} + 12 x^{6} + 4 x^{5} - 12 x^{4}$$
+# 
+# 4. Encontre as soluções do sistema:
+# 
+# $$\begin{cases}4x - 3y + 2z = 60\\ (x - 10)^2 + y^2 + z^2 = 72\\ 2x + 9y +z = 20 \end{cases}$$
