@@ -305,7 +305,7 @@ nonlinsolve(Eqs, x, y) # Sistema não-linear (solve também serve). No nosso cas
 # 
 # 3. Verifique se as igualdades são verdadeiras:
 # 
-# $$\Gamma\left(\dfrac{3}{2}\right) = \left(\dfrac{1}{2}\right)! = \dfrac{\sqrt{\pi}}{2}$$
+# $$\Gamma\left(\dfrac{3}{2}\right) = \dfrac{\sqrt{\pi}}{2}$$
 # 
 # $$\sin(2x^2) - \cos(x^2 +x) = \sin{\left(x \right)} \sin{\left(x^{2} \right)} + 2 \sin{\left(x^{2} \right)} \cos{\left(x^{2} \right)} - \cos{\left(x \right)} \cos{\left(x^{2} \right)}$$
 # 

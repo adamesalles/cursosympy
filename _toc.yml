@@ -13,3 +13,4 @@ parts:
   - caption: Utilizando o SymPy
     chapters:
     - file: chapters/3.ipynb
+    - file: chapters/4.ipynb
