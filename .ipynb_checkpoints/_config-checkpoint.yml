@@ -22,6 +22,9 @@ bibtex_bibfiles:
 sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax_config:
+      Loader:
+        load: ["input/tex", "output/chtml"]
 
 # Information about where the book exists on the web
 repository:
@@ -34,3 +37,5 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_multitoc_numbering: false
+  
