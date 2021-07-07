@@ -3,7 +3,7 @@
 
 format: jb-book
 root: intro
-options:  # The defaults key will be applied to all chapters and sub-sections
+defaults:  # The defaults key will be applied to all chapters and sub-sections
   numbered: 2
 parts:
   - caption: Introdução ao Python
