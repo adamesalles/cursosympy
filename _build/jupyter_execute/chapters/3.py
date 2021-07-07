@@ -69,19 +69,19 @@ solve(sqrt(x) - (x/2),x)
 
 # Inclusive, caso queira uma resposta como costumamos escrever no papel, ou seja, em forma de conjunto e suas condições, podemos utilizar o `solveset()`. A maior diferença é que ele pode receber o conjunto numérico onde você quer trabalhar através do parâmetro `domain`. Na maioria das vezes podemos utilizar `domain=S.Reals` ou `domain=S.Complexes`.
 
-# In[195]:
+# In[6]:
 
 
 solveset(x**2 - 4*x  +20,x, domain=S.Reals)
 
 
-# In[196]:
+# In[7]:
 
 
 solveset(x**2 - 4*x  +20,x, domain=S.Complexes)
 
 
-# In[209]:
+# In[8]:
 
 
 solveset(tan(x), x, domain=S.Reals)
@@ -89,7 +89,7 @@ solveset(tan(x), x, domain=S.Reals)
 
 # Vamos criar uma variável para armazenar essa primeira expressão para mostrar outros exemplos
 
-# In[6]:
+# In[9]:
 
 
 expr = x**2 - 4*x + 3
@@ -97,13 +97,13 @@ expr = x**2 - 4*x + 3
 
 # Podemos achar valores utilizando o método `subs()`. Novamente, devemos especficiar a variável.
 
-# In[7]:
+# In[10]:
 
 
 expr.subs(x,2) # Se y = expr, esse é o valor de y quando x = 2.
 
 
-# In[8]:
+# In[11]:
 
 
 expr.subs(x,1)
@@ -111,14 +111,14 @@ expr.subs(x,1)
 
 # Se tivermos uma expressão numérica não-inteira e quisermos achar a solução em um ponto flutuante (`float`), podemos usar o método `evalf()`.
 
-# In[9]:
+# In[12]:
 
 
 my_sqrt = sqrt(8)
 my_sqrt
 
 
-# In[10]:
+# In[13]:
 
 
 my_sqrt.evalf()
@@ -128,35 +128,35 @@ my_sqrt.evalf()
 
 # Existem algumas funções que "fazem Álgebra" por si só. Veja alguns exemplos:
 
-# In[11]:
+# In[14]:
 
 
 # Simplifica
 simplify((x**2 + x)/x) 
 
 
-# In[12]:
+# In[15]:
 
 
 # Fatora
 factor(1-1/x)
 
 
-# In[13]:
+# In[16]:
 
 
 # Expande
 expand((x**2 + 3*x)**3)
 
 
-# In[14]:
+# In[17]:
 
 
 # Agrupa potências de uma variável (que vai como segundo parâmetro)
 collect(x**2 + 4*x - 2*x**2 + x -20 + x**3 + 2, x)
 
 
-# In[15]:
+# In[18]:
 
 
 # Separa fração em frações parciais
@@ -167,13 +167,13 @@ apart((x**2 + 8*x-18)/(x**3 + 3*x**2))
 # 
 # Finalizando esse tópico inicial, temos como substituir uma função em termos de outra. Por exemplo:
 
-# In[16]:
+# In[19]:
 
 
 sin(x).rewrite(cos)
 
 
-# In[17]:
+# In[20]:
 
 
 (x**3).rewrite(exp)
@@ -185,7 +185,7 @@ sin(x).rewrite(cos)
 # 
 # Para equações criamos uma classe `Eq()`. Não se preocupe com a nomenclatura, é só uma forma de criar um objeto do tipo `Eq`. Para criar esse objeto, passamos dois argumentos: cada lado da equação, respectivamente. Veja:
 
-# In[18]:
+# In[21]:
 
 
 eq = Eq(x**2, 2)
@@ -194,7 +194,7 @@ eq
 
 # Podemos utilizar o mesmo método para encontrar suas raízes.
 
-# In[19]:
+# In[22]:
 
 
 solve(eq,x)
@@ -204,13 +204,13 @@ solve(eq,x)
 # 
 # Como verificar igualdade entre duas expressões? O `==` só servirá para expressões identicas (não somente em valor, mas também nos termos expressos). Para isso, utilizamos o método `equals()`. Veja: 
 
-# In[20]:
+# In[23]:
 
 
 expr_1 = sin(x)**2
 
 
-# In[21]:
+# In[24]:
 
 
 expr_2 = .5*(1 -cos(2*x))
@@ -218,7 +218,7 @@ expr_2 = .5*(1 -cos(2*x))
 
 # Como veremos abaixo, pelo `==` as expressões seriam diferentes.
 
-# In[22]:
+# In[25]:
 
 
 expr_1 == expr_2
@@ -226,7 +226,7 @@ expr_1 == expr_2
 
 # Vejamos pelo método `equals()`:
 
-# In[23]:
+# In[26]:
 
 
 expr_1.equals(expr_2)
@@ -234,7 +234,7 @@ expr_1.equals(expr_2)
 
 # Podemos visualizar a igualdade da seguinte forma:
 
-# In[24]:
+# In[27]:
 
 
 Eq(expr_1,expr_2)
@@ -244,7 +244,7 @@ Eq(expr_1,expr_2)
 # 
 # Podemos, também utilizando `solve()` encontrar as soluções de um sistema de equações. Basta passar uma lista com as equações como parâmetro.
 
-# In[210]:
+# In[28]:
 
 
 y, z = symbols('y z') # Criando o y simbólico
@@ -256,13 +256,13 @@ solve(Eqs, x, y)
 
 # Caso esteja tentando resolver um sistema linear (como o acima), é possível utilizar o `linsolve()`.
 
-# In[176]:
+# In[29]:
 
 
 linsolve(Eqs, x, y)
 
 
-# In[215]:
+# In[30]:
 
 
 Eqs = []
@@ -272,13 +272,76 @@ Eqs.append(Eq(-7*x + 9*y + 5*z, 40))
 linsolve(Eqs, x, y,z)
 
 
-# In[221]:
+# In[31]:
 
 
 Eqs = []
 Eqs.append(Eq(x**2 + y**2, 18)) #  Elipse de centro (0,0) e R^2 = 18
 Eqs.append(Eq(x, y)) # Reta identidade
 nonlinsolve(Eqs, x, y) # Sistema não-linear (solve também serve). No nosso caso, 2 pontos de intersecção.
+
+
+# ## Matrizes
+# 
+# É bem trivial trabalhar com matrizes no Sympy. De modo geral, basta criar um objeto a partir da classe `Matrix`. E passamos uma lista de listas, sendo cada uma das listas uma linha. Veja:
+
+# In[32]:
+
+
+Matrix([[1,2,3],[2,3,1]])
+
+
+# E podemos manipulá-las normalmente, com as operações comuns. Além disso, há algumas outras operações especiais.
+
+# In[33]:
+
+
+A = Matrix([[1,2,3],[2,3,1]])
+B = Matrix([[3,2], [2,2], [1,4]])
+A, B
+
+
+# In[34]:
+
+
+A * B # Multiplicação
+
+
+# In[35]:
+
+
+B.T # Transpor
+
+
+# In[36]:
+
+
+A + B.T # Soma
+
+
+# In[37]:
+
+
+A.row(1) # Começa em 0
+
+
+# In[38]:
+
+
+B.col(0) # Também começa em 0
+
+
+# In[39]:
+
+
+B = B.col_insert(2,Matrix([2,3,2])) # Insere Coluna
+B
+
+
+# In[40]:
+
+
+B**-1
 
 
 # ## Exercícios

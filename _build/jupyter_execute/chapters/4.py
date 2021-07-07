@@ -12,6 +12,7 @@
 
 from sympy import *
 x, y, z = symbols('x y z')
+init_printing(use_unicode=True, use_latex='mathjax')
 
 
 # ## Intervalos
@@ -212,3 +213,108 @@ expr.diff(x)
 
 expr.diff(x,3) # Terceira derivada
 
+
+# ## Integrais
+# 
+# Assim como os Limites e as Derivadas que vimos acima, podemos criar uma Integral através da classe `Integral()` caso queiramos ter somente a expressão, e caso queiramos o resultado de uma Integral, basta utilizar a função `integrate()`.
+# 
+# O `Sympy` não acresce a constante de integração nas Integrais Indefinidas, então é importante se lembrar delaa quando for resolver algum exercício.
+
+# In[29]:
+
+
+Integral(1/x, x)
+
+
+# In[30]:
+
+
+Integral(1/x, (x, 1, 10)) # Note que passamos (simbolo, inf, sup)
+
+
+# In[31]:
+
+
+integrate(1/x, (x,1,10))
+
+
+# In[32]:
+
+
+my_integral = Integral(1/x + 1/y, (x, 1, 10), (y, 1, 10)) # Integral dupla, duas variáveis.
+my_integral
+
+
+# In[33]:
+
+
+my_integral.doit()
+
+
+# In[34]:
+
+
+Integral(exp(x**2 - 10), x,x) # Integral dupla indefinida, mesma variável
+
+
+# ## Outras funções
+# 
+# ### Séries
+# 
+# Você pode utilizar o método `series()` em uma expressão para fazer sua expansão em série.
+
+# In[35]:
+
+
+asin(x).series(x,0, 10) # (x, x_0, n)
+
+
+# ### Equações Diferenciais
+# 
+# Ao criar uma função simbólica, você pode utilizar derivadas e a função `dsolve()` para encontrar a solução de uma expressão e ou equação diferencial. Nesse caso, o `SymPy` insere as constantes quando necessário.
+
+# In[36]:
+
+
+f = Function('f')
+my_deq = Eq(Derivative(f(x),x,2),f(x))
+my_deq
+
+
+# In[37]:
+
+
+dsolve(my_deq)
+
+
+# ## Exercícios
+# 
+# Como nos últimos capítulos, resolva os seguintes exercícios com o que aprendeu ao longo do curso.
+# 
+# 1. Para cada uma das funções abaixo, encontre:
+# 
+# a) O domínio da função;
+# 
+# b) As assíntotas horizontais e verticais, caso existam;
+# 
+# c) Sua derivada, os intervalos de crescimento e decrescimento de f,os pontos de máximo e mínimo, caso existam; 
+# 
+# d) Os intervalos onde o gráfico da f é côncavo para cima e onde é côncavo para baixo.
+# 
+# $$f(x) = \dfrac{x^3}{x + 4}$$
+# 
+# $$g(x) = \dfrac{x^3 - 4x^2 + 5}{x^2 - x}$$
+# 
+# $$h(x) = x^2 - 4x + \dfrac{x}{x-10}$$
+# 
+# 2. Calcule:
+# 
+# $$\int x^3 - 2x^2 + 3x + 10 \,\ dx$$
+# 
+# $$\int x^3\cdot\sin(2x) \,\ dx$$
+# 
+# $$\int_0^{10} \tan^3(x)\sec^3(x) \,\ dx $$
+# 
+# $$\int_1^{\infty} -\dfrac{1}{x^2} \,\ dx $$
+# 
+# 3. Qual a menor distância vertical entre as funções $f(x) = 32x^2$ e $g(x) = -\dfrac{8}{x^2}$?
