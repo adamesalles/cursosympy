@@ -3,8 +3,8 @@
 
 format: jb-book
 root: intro
-defaults:  # The defaults key will be applied to all chapters and sub-sections
-  numbered: 2
+options:
+  numbered: true
 parts:
   - caption: Introdução ao Python
     chapters:
@@ -14,3 +14,4 @@ parts:
     chapters:
     - file: chapters/3.ipynb
     - file: chapters/4.ipynb
+    - file: chapters/5.ipynb

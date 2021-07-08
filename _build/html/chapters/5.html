@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plotando Gráficos &#8212; Curso de SymPy</title>
+    <title>Criando Gráficos &#8212; Curso de SymPy</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"Loader": {"load": ["input/tex", "output/svg"]}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Aplicações em Cálculo Diferencial e Integral" href="4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,12 +98,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.html">
-   1. Conhecendo e Preparando o Ambiente
+   Conhecendo e Preparando o Ambiente
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2.html">
-   2. Básicos da Programação em Python
+   Básicos da Programação em Python
   </a>
  </li>
 </ul>
@@ -109,15 +112,20 @@
   Utilizando o SymPy
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.html">
-   1. Primeiros Passos com o Sympy
+   Primeiros Passos com o Sympy
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4.html">
-   2. Aplicações em Cálculo Diferencial e Integral
+   Aplicações em Cálculo Diferencial e Integral
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Criando Gráficos
   </a>
  </li>
 </ul>
@@ -197,11 +205,41 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/adamesalles/cursosympy/main?urlpath=tree/chapters/5.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-2d">
+   Plot 2D
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -210,8 +248,113 @@
         
               <div>
                 
-  <div class="section" id="plotando-graficos">
-<h1>Plotando Gráficos<a class="headerlink" href="#plotando-graficos" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="criando-graficos">
+<h1>Criando Gráficos<a class="headerlink" href="#criando-graficos" title="Permalink to this headline">¶</a></h1>
+<p>O uso de gráficos na matemática, principalmente no Cálculo e na Geometria Analítica, é de extrema importância. Embora esse não seja o foco do <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>, é possível criar os chamados <em>plots</em> com certa facilidade. Inclusive, como é utilizado o <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> para criar os gráficos, há uma grande margem para alterações. Isso permite gráficos quase totalmente customizáveis.</p>
+<p>Os tipos de plots abordados nesse capítulos serão os criados pelas funções:</p>
+<ul class="simple">
+<li><p>plot()</p></li>
+<li><p>plot_implicit()</p></li>
+<li><p>plot3d()</p></li>
+</ul>
+<p>O seu uso é facilitado mais ainda pelo ambiente Jupyter, e podemos trabalhar com eles de forma semelhante ao que fora abordado no último capítulo. Ou seja, podemos criar um objeto para trabalharmos com ele, e depois ver o resultado. Ou, podemos simplesmente criar um plot.</p>
+<p>Antes de começarmos, vamos a importação e as definições essenciais:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">)</span>
+<span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_latex</span><span class="o">=</span><span class="s1">&#39;mathjax&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-2d">
+<h2>Plot 2D<a class="headerlink" href="#plot-2d" title="Permalink to this headline">¶</a></h2>
+<p>As duas primeiras funções que trabalharemos criam plots em 2D. Para fazer um plot de uma função, basta utilizar a função <code class="docutils literal notranslate"><span class="pre">plot()</span></code>. Confira abaixo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_3_0.png" src="../_images/5_3_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f1be2150790&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos, inclusive, fazer vários plots unidos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_5_0.png" src="../_images/5_5_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f1bbf90b510&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Obviamente, o gráfico acima está longe de ser o melhor possível. Mas com apenas uma função fizemos algo relevante. Mas, se armazenarmos, note o que podemos fazer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># show=False para não plotar.</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># .show() para exibir</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_7_0.png" src="../_images/5_7_0.png" />
+</div>
+</div>
+<p>Por enquanto, nada mudou. Mas podemos ir trabalhando em seus atributos assim.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span> <span class="c1"># x²</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_9_0.png" src="../_images/5_9_0.png" />
+</div>
+</div>
+<p>Estamos melhorando. Veja que <code class="docutils literal notranslate"><span class="pre">my_plot</span></code> armazena as funções em sequência. Trabalhamos em <span class="math notranslate nohighlight">\(x^2\)</span> individualmente quando usamos <code class="docutils literal notranslate"><span class="pre">my_plot[1]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_plot</span><span class="o">.</span><span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Legenda</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">xlim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Esse é o máximo por padrão, veremos como alterar isso mais tarde</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># Tamanho da figura</span>
+<span class="n">my_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_11_0.png" src="../_images/5_11_0.png" />
+</div>
+</div>
+<p>Acho que conseguimos um bom resultado. Contudo, você concorda que é um pouco cansativo acessar cada um desses valores e ir alterando, certo? E, se não definíssemos os limites em <span class="math notranslate nohighlight">\(x\)</span> para <span class="math notranslate nohighlight">\([-10,10]\)</span>, você veria que a função não continuaria. Isso ocorre pois não definimos o alcance de nosso plot ao criá-lo.</p>
+<p>Aliado a isso, é possível criar dois plots diferentes e uní-los com o método <code class="docutils literal notranslate"><span class="pre">.extend()</span></code>.</p>
+<p>Com o que aprendemos podemos fazer, com um único comando, um bom plot de uma única função. Caso queiramos mais de uma (como fizemos acima), basta alterar as cores de suas linhas.</p>
+<p>Caso você conheça <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, é possível utilizar todos os parâmetros para anotações e etc. Não abordarei isso aqui pois acredito que foge do nosso objetivo, mas é algo interessante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+<span class="n">p1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_13_0.png" src="../_images/5_13_0.png" />
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -239,6 +382,7 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="4.html" title="previous page">Aplicações em Cálculo Diferencial e Integral</a>
 
         </div>
         
