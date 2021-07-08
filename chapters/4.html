@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Aplicações em Cálculo Diferencial e Integral &#8212; Curso de SymPy</title>
+    <title>Aplicações em Cálculo Diferencial e Integral &#8212; Curso de SymPy</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"Loader": {"load": ["input/tex", "output/svg"]}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="1. Primeiros Passos com o Sympy" href="3.html" />
+    <link rel="next" title="Criando Gráficos" href="5.html" />
+    <link rel="prev" title="Primeiros Passos com o Sympy" href="3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -98,12 +99,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.html">
-   1. Conhecendo e Preparando o Ambiente
+   Conhecendo e Preparando o Ambiente
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2.html">
-   2. Básicos da Programação em Python
+   Básicos da Programação em Python
   </a>
  </li>
 </ul>
@@ -115,12 +116,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.html">
-   1. Primeiros Passos com o Sympy
+   Primeiros Passos com o Sympy
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Aplicações em Cálculo Diferencial e Integral
+   Aplicações em Cálculo Diferencial e Integral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.html">
+   Criando Gráficos
   </a>
  </li>
 </ul>
@@ -229,12 +235,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#intervalos">
-   2.1. Intervalos
+   Intervalos
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analises-de-dominio-intervalo">
-   2.2. Análises de Domínio/Intervalo
+   Análises de Domínio/Intervalo
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -246,22 +252,22 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#limites">
-   2.3. Limites
+   Limites
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivadas">
-   2.4. Derivadas
+   Derivadas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#integrais">
-   2.5. Integrais
+   Integrais
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outras-funcoes">
-   2.6. Outras funções
+   Outras funções
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -278,7 +284,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercicios">
-   2.7. Exercícios
+   Exercícios
   </a>
  </li>
 </ul>
@@ -293,7 +299,7 @@
               <div>
                 
   <div class="section" id="aplicacoes-em-calculo-diferencial-e-integral">
-<h1><span class="section-number">2. </span>Aplicações em Cálculo Diferencial e Integral<a class="headerlink" href="#aplicacoes-em-calculo-diferencial-e-integral" title="Permalink to this headline">¶</a></h1>
+<h1>Aplicações em Cálculo Diferencial e Integral<a class="headerlink" href="#aplicacoes-em-calculo-diferencial-e-integral" title="Permalink to this headline">¶</a></h1>
 <p>De modo geral, o principal objetivo do curso é garantir que seus alunos estejam proeficientes no uso de <code class="docutils literal notranslate"><span class="pre">SymPy</span></code> no Cálculo. Na minha opinião, esse é o capítulo mais importante do curso. Dê seu máximo para absorver o conteúdo aqui apresentado.</p>
 <p>Antes de comerçarmos, certifique-se que fez as devidas importações e atribuições:</p>
 <div class="cell docutils container">
@@ -306,7 +312,7 @@
 </div>
 </div>
 <div class="section" id="intervalos">
-<h2><span class="section-number">2.1. </span>Intervalos<a class="headerlink" href="#intervalos" title="Permalink to this headline">¶</a></h2>
+<h2>Intervalos<a class="headerlink" href="#intervalos" title="Permalink to this headline">¶</a></h2>
 <p>Nós sabemos que o Cálculo é, genericamente, o estudo das mudanças. E nós costumamos definir intervalos para trabalhar com nossas funções e expressões. É bem simples de criá-los e utilizá-los no <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>.</p>
 <p>Para criar um intervalo, criamos um objeto a partir da classe <code class="docutils literal notranslate"><span class="pre">Interval</span></code> e/ou um método seu para definir se está aberto em algum dos lados. Veja os exemplos:</p>
 <div class="cell docutils container">
@@ -369,7 +375,7 @@
 </div>
 </div>
 <div class="section" id="analises-de-dominio-intervalo">
-<h2><span class="section-number">2.2. </span>Análises de Domínio/Intervalo<a class="headerlink" href="#analises-de-dominio-intervalo" title="Permalink to this headline">¶</a></h2>
+<h2>Análises de Domínio/Intervalo<a class="headerlink" href="#analises-de-dominio-intervalo" title="Permalink to this headline">¶</a></h2>
 <p>Existem diversas funções embutidas no <code class="docutils literal notranslate"><span class="pre">SymPy</span></code> para avaliar o comportamento das funções/expressões ao longo de seu domínio ou de um intervalo específico. Normalmente elas retornarão um booleano.</p>
 <div class="section" id="verificar-se-e-crescente-ou-decrescente">
 <h3>Verificar se é crescente ou decrescente.<a class="headerlink" href="#verificar-se-e-crescente-ou-decrescente" title="Permalink to this headline">¶</a></h3>
@@ -467,7 +473,7 @@
 </div>
 </div>
 <div class="section" id="limites">
-<h2><span class="section-number">2.3. </span>Limites<a class="headerlink" href="#limites" title="Permalink to this headline">¶</a></h2>
+<h2>Limites<a class="headerlink" href="#limites" title="Permalink to this headline">¶</a></h2>
 <p>Assim como veremos posteriormente nas derivadas e nas integrais, há duas formas de criar e calcular limites no <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>. A primeria forma é através da classe <code class="docutils literal notranslate"><span class="pre">Limit</span></code>, que criará um limite e não calculará seu valor. Ou seja, utilize ela para armazenar a expressão do limite. Caso queira somente calcular o limite. Utilizamos a função <code class="docutils literal notranslate"><span class="pre">limit()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -538,7 +544,7 @@
 </div>
 </div>
 <div class="section" id="derivadas">
-<h2><span class="section-number">2.4. </span>Derivadas<a class="headerlink" href="#derivadas" title="Permalink to this headline">¶</a></h2>
+<h2>Derivadas<a class="headerlink" href="#derivadas" title="Permalink to this headline">¶</a></h2>
 <p>Assim com os limites, podemos criar a derivada (sem calculá-la) através da classe <code class="docutils literal notranslate"><span class="pre">Derivative()</span></code>. E calcular diretamente através da <code class="docutils literal notranslate"><span class="pre">diff()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -644,7 +650,7 @@
 </div>
 </div>
 <div class="section" id="integrais">
-<h2><span class="section-number">2.5. </span>Integrais<a class="headerlink" href="#integrais" title="Permalink to this headline">¶</a></h2>
+<h2>Integrais<a class="headerlink" href="#integrais" title="Permalink to this headline">¶</a></h2>
 <p>Assim como os Limites e as Derivadas que vimos acima, podemos criar uma Integral através da classe <code class="docutils literal notranslate"><span class="pre">Integral()</span></code> caso queiramos ter somente a expressão, e caso queiramos o resultado de uma Integral, basta utilizar a função <code class="docutils literal notranslate"><span class="pre">integrate()</span></code>.</p>
 <p>O <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> não acresce a constante de integração nas Integrais Indefinidas, então é importante se lembrar delaa quando for resolver algum exercício.</p>
 <div class="cell docutils container">
@@ -716,7 +722,7 @@
 </div>
 </div>
 <div class="section" id="outras-funcoes">
-<h2><span class="section-number">2.6. </span>Outras funções<a class="headerlink" href="#outras-funcoes" title="Permalink to this headline">¶</a></h2>
+<h2>Outras funções<a class="headerlink" href="#outras-funcoes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="series">
 <h3>Séries<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h3>
 <p>Você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">series()</span></code> em uma expressão para fazer sua expansão em série.</p>
@@ -762,7 +768,7 @@
 </div>
 </div>
 <div class="section" id="exercicios">
-<h2><span class="section-number">2.7. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
 <p>Como nos últimos capítulos, resolva os seguintes exercícios com o que aprendeu ao longo do curso.</p>
 <ol class="simple">
 <li><p>Para cada uma das funções abaixo, encontre:</p></li>
@@ -819,7 +825,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="3.html" title="previous page"><span class="section-number">1. </span>Primeiros Passos com o Sympy</a>
+    <a class='left-prev' id="prev-link" href="3.html" title="previous page">Primeiros Passos com o Sympy</a>
+    <a class='right-next' id="next-link" href="5.html" title="next page">Criando Gráficos</a>
 
         </div>
         
