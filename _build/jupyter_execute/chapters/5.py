@@ -26,6 +26,8 @@ init_printing(use_unicode=True, use_latex='mathjax')
 # ## Plot 2D
 # 
 # As duas primeiras funções que trabalharemos criam plots em 2D. Para fazer um plot de uma função, basta utilizar a função `plot()`. Confira abaixo:
+# 
+# ### Funções
 
 # In[2]:
 
@@ -87,4 +89,43 @@ p1 = plot(exp(x), log(x),x, (x, -2, 10), ylim = (-2,10), legend = True, size = (
 p1[1].line_color = 'red'
 p1[2].line_color = 'green'
 p1.show()
+
+
+# ### Equações Implícitas
+# 
+# Quando temos uma equação com variável implícita, utilizamos a `plot_implicit()`. Ela segue a mesma lógica de `plot()` em sua construção. Veja uma circunferência.
+
+# In[8]:
+
+
+cir = Eq(x**2 + y**2, 16) # R = 2
+plot_implicit(cir)
+
+
+# Também podemos elaborá-lo.
+
+# In[9]:
+
+
+plot_implicit(Eq(x**2/9 + y**2/4, 1), (x, -4, 4), ylim = (-4,4), size = (6,6)) # Elípse
+# axis = False, deixa sem os eixos
+
+
+# ## Plot 3D
+# 
+# Utilizando funções de duas variáveis, nós conseguimos fazer plots em 3d com a função `plot3d()`.
+
+# In[21]:
+
+
+from sympy.plotting import plot3d # Caso queira importá-la diretamente
+plot3d(x**2 + y**2)
+
+
+# Os parâmetros são muito parecidos com a função `plot()`
+
+# In[29]:
+
+
+plot3d(sin(x) + cos(y), size = (6,6))
 

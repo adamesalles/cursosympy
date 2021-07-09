@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Criando Gráficos &#8212; Curso de SymPy</title>
+    <title>3. Criando Gráficos &#8212; Curso de SymPy</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"Loader": {"load": ["input/tex", "output/svg"]}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Aplicações em Cálculo Diferencial e Integral" href="4.html" />
+    <link rel="prev" title="2. Aplicações em Cálculo Diferencial e Integral" href="4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -98,12 +98,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.html">
-   Conhecendo e Preparando o Ambiente
+   1. Conhecendo e Preparando o Ambiente
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2.html">
-   Básicos da Programação em Python
+   2. Básicos da Programação em Python
   </a>
  </li>
 </ul>
@@ -115,17 +115,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.html">
-   Primeiros Passos com o Sympy
+   1. Primeiros Passos com o Sympy
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4.html">
-   Aplicações em Cálculo Diferencial e Integral
+   2. Aplicações em Cálculo Diferencial e Integral
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Criando Gráficos
+   3. Criando Gráficos
   </a>
  </li>
 </ul>
@@ -234,7 +234,24 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-2d">
-   Plot 2D
+   3.1. Plot 2D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcoes">
+     Funções
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equacoes-implicitas">
+     Equações Implícitas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-3d">
+   3.2. Plot 3D
   </a>
  </li>
 </ul>
@@ -249,7 +266,7 @@
               <div>
                 
   <div class="section" id="criando-graficos">
-<h1>Criando Gráficos<a class="headerlink" href="#criando-graficos" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Criando Gráficos<a class="headerlink" href="#criando-graficos" title="Permalink to this headline">¶</a></h1>
 <p>O uso de gráficos na matemática, principalmente no Cálculo e na Geometria Analítica, é de extrema importância. Embora esse não seja o foco do <code class="docutils literal notranslate"><span class="pre">SymPy</span></code>, é possível criar os chamados <em>plots</em> com certa facilidade. Inclusive, como é utilizado o <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> para criar os gráficos, há uma grande margem para alterações. Isso permite gráficos quase totalmente customizáveis.</p>
 <p>Os tipos de plots abordados nesse capítulos serão os criados pelas funções:</p>
 <ul class="simple">
@@ -269,8 +286,10 @@
 </div>
 </div>
 <div class="section" id="plot-2d">
-<h2>Plot 2D<a class="headerlink" href="#plot-2d" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Plot 2D<a class="headerlink" href="#plot-2d" title="Permalink to this headline">¶</a></h2>
 <p>As duas primeiras funções que trabalharemos criam plots em 2D. Para fazer um plot de uma função, basta utilizar a função <code class="docutils literal notranslate"><span class="pre">plot()</span></code>. Confira abaixo:</p>
+<div class="section" id="funcoes">
+<h3>Funções<a class="headerlink" href="#funcoes" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
@@ -279,7 +298,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_3_0.png" src="../_images/5_3_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f1be2150790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2180c98310&gt;
 </pre></div>
 </div>
 </div>
@@ -293,7 +312,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_5_0.png" src="../_images/5_5_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f1bbf90b510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f21568f90d0&gt;
 </pre></div>
 </div>
 </div>
@@ -355,6 +374,72 @@
 </div>
 </div>
 </div>
+<div class="section" id="equacoes-implicitas">
+<h3>Equações Implícitas<a class="headerlink" href="#equacoes-implicitas" title="Permalink to this headline">¶</a></h3>
+<p>Quando temos uma equação com variável implícita, utilizamos a <code class="docutils literal notranslate"><span class="pre">plot_implicit()</span></code>. Ela segue a mesma lógica de <code class="docutils literal notranslate"><span class="pre">plot()</span></code> em sua construção. Veja uma circunferência.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cir</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="c1"># R = 2</span>
+<span class="n">plot_implicit</span><span class="p">(</span><span class="n">cir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_15_0.png" src="../_images/5_15_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2154121710&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Também podemos elaborá-lo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_implicit</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">9</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span> <span class="c1"># Elípse</span>
+<span class="c1"># axis = False, deixa sem os eixos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_17_0.png" src="../_images/5_17_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f21542e7690&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-3d">
+<h2><span class="section-number">3.2. </span>Plot 3D<a class="headerlink" href="#plot-3d" title="Permalink to this headline">¶</a></h2>
+<p>Utilizando funções de duas variáveis, nós conseguimos fazer plots em 3d com a função <code class="docutils literal notranslate"><span class="pre">plot3d()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.plotting</span> <span class="kn">import</span> <span class="n">plot3d</span> <span class="c1"># Caso queira importá-la diretamente</span>
+<span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_19_0.png" src="../_images/5_19_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2153db6550&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os parâmetros são muito parecidos com a função <code class="docutils literal notranslate"><span class="pre">plot()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot3d</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_21_0.png" src="../_images/5_21_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2150afc410&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -382,7 +467,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="4.html" title="previous page">Aplicações em Cálculo Diferencial e Integral</a>
+    <a class='left-prev' id="prev-link" href="4.html" title="previous page"><span class="section-number">2. </span>Aplicações em Cálculo Diferencial e Integral</a>
 
         </div>
         
