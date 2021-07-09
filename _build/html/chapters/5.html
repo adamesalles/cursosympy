@@ -232,27 +232,46 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-2d">
-   3.1. Plot 2D
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3. Criando Gráficos
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#funcoes">
-     Funções
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-2d">
+     3.1. Plot 2D
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equacoes-implicitas">
-     Equações Implícitas
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#funcoes">
+       Funções
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-3d">
-   3.2. Plot 3D
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-x-3">
+   4. plot(x**3)
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equacoes-implicitas">
+     4.1. Equações Implícitas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-3d">
+     4.2. Plot 3D
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercicios">
+     4.3. Exercícios
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -290,19 +309,11 @@
 <p>As duas primeiras funções que trabalharemos criam plots em 2D. Para fazer um plot de uma função, basta utilizar a função <code class="docutils literal notranslate"><span class="pre">plot()</span></code>. Confira abaixo:</p>
 <div class="section" id="funcoes">
 <h3>Funções<a class="headerlink" href="#funcoes" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/5_3_0.png" src="../_images/5_3_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2180c98310&gt;
-</pre></div>
 </div>
 </div>
 </div>
+<div class="section" id="plot-x-3">
+<h1><span class="section-number">4. </span>plot(x**3)<a class="headerlink" href="#plot-x-3" title="Permalink to this headline">¶</a></h1>
 <p>Podemos, inclusive, fazer vários plots unidos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -312,7 +323,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_5_0.png" src="../_images/5_5_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f21568f90d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f7239cf2ad0&gt;
 </pre></div>
 </div>
 </div>
@@ -373,9 +384,8 @@
 <img alt="../_images/5_13_0.png" src="../_images/5_13_0.png" />
 </div>
 </div>
-</div>
 <div class="section" id="equacoes-implicitas">
-<h3>Equações Implícitas<a class="headerlink" href="#equacoes-implicitas" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">4.1. </span>Equações Implícitas<a class="headerlink" href="#equacoes-implicitas" title="Permalink to this headline">¶</a></h2>
 <p>Quando temos uma equação com variável implícita, utilizamos a <code class="docutils literal notranslate"><span class="pre">plot_implicit()</span></code>. Ela segue a mesma lógica de <code class="docutils literal notranslate"><span class="pre">plot()</span></code> em sua construção. Veja uma circunferência.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -386,7 +396,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_15_0.png" src="../_images/5_15_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2154121710&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f720367dfd0&gt;
 </pre></div>
 </div>
 </div>
@@ -401,15 +411,14 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_17_0.png" src="../_images/5_17_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f21542e7690&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f7203689ad0&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="plot-3d">
-<h2><span class="section-number">3.2. </span>Plot 3D<a class="headerlink" href="#plot-3d" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Plot 3D<a class="headerlink" href="#plot-3d" title="Permalink to this headline">¶</a></h2>
 <p>Utilizando funções de duas variáveis, nós conseguimos fazer plots em 3d com a função <code class="docutils literal notranslate"><span class="pre">plot3d()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -420,7 +429,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_19_0.png" src="../_images/5_19_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2153db6550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f7203a7b6d0&gt;
 </pre></div>
 </div>
 </div>
@@ -428,17 +437,43 @@
 <p>Os parâmetros são muito parecidos com a função <code class="docutils literal notranslate"><span class="pre">plot()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot3d</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot3d</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/5_21_0.png" src="../_images/5_21_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f2150afc410&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f7203515e10&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p>Além desses plots, há os plots paramétricos. Recomendo que dê uma olhada na documentação. No mais, é realmente simples criar plots no Sympy.</p>
+</div>
+<div class="section" id="exercicios">
+<h2><span class="section-number">4.3. </span>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Faça o plot das seguintes funções, escolhendo os melhores valores para os parâmetros:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[f(x) = 4x^2 - 3x + 26\]</div>
+<div class="math notranslate nohighlight">
+\[g(x) = \log(x^2 + 10)\]</div>
+<div class="math notranslate nohighlight">
+\[h(x) = 10x^4 + 7x^3 - 10x + 20\]</div>
+<div class="math notranslate nohighlight">
+\[p(x) = \sin(x^2 - x\cdot \pi) + \cos\left(x + \dfrac{\pi}{6}\right)\]</div>
+<ol class="simple">
+<li><p>Faça o plot das seguintes equações, escolhendo os melhores valores para os parâmetros:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ 2x - 5y = 20\]</div>
+<div class="math notranslate nohighlight">
+\[x^2 + y^2 = 60\]</div>
+<div class="math notranslate nohighlight">
+\[\dfrac{x^2}{10} - \dfrac{y^2}{8} = 1\]</div>
+<div class="math notranslate nohighlight">
+\[2x - 5y^2 = 10\]</div>
 </div>
 </div>
 

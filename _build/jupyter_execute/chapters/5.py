@@ -29,15 +29,11 @@ init_printing(use_unicode=True, use_latex='mathjax')
 # 
 # ### Funções
 
-# In[2]:
-
-
-plot(x**3)
-
+# # plot(x**3)
 
 # Podemos, inclusive, fazer vários plots unidos.
 
-# In[3]:
+# In[2]:
 
 
 plot(x**3, x**2)
@@ -45,7 +41,7 @@ plot(x**3, x**2)
 
 # Obviamente, o gráfico acima está longe de ser o melhor possível. Mas com apenas uma função fizemos algo relevante. Mas, se armazenarmos, note o que podemos fazer.
 
-# In[4]:
+# In[3]:
 
 
 my_plot = plot(x**3, x**2, show=False) # show=False para não plotar.
@@ -54,7 +50,7 @@ my_plot.show() # .show() para exibir
 
 # Por enquanto, nada mudou. Mas podemos ir trabalhando em seus atributos assim.
 
-# In[5]:
+# In[4]:
 
 
 my_plot[1].line_color = 'red' # x²
@@ -63,7 +59,7 @@ my_plot.show()
 
 # Estamos melhorando. Veja que `my_plot` armazena as funções em sequência. Trabalhamos em $x^2$ individualmente quando usamos `my_plot[1]`.
 
-# In[6]:
+# In[5]:
 
 
 my_plot.legend = True # Legenda
@@ -82,7 +78,7 @@ my_plot.show()
 # Caso você conheça `matplotlib`, é possível utilizar todos os parâmetros para anotações e etc. Não abordarei isso aqui pois acredito que foge do nosso objetivo, mas é algo interessante.
 # 
 
-# In[7]:
+# In[6]:
 
 
 p1 = plot(exp(x), log(x),x, (x, -2, 10), ylim = (-2,10), legend = True, size = (6,6), show=False)
@@ -95,7 +91,7 @@ p1.show()
 # 
 # Quando temos uma equação com variável implícita, utilizamos a `plot_implicit()`. Ela segue a mesma lógica de `plot()` em sua construção. Veja uma circunferência.
 
-# In[8]:
+# In[7]:
 
 
 cir = Eq(x**2 + y**2, 16) # R = 2
@@ -104,7 +100,7 @@ plot_implicit(cir)
 
 # Também podemos elaborá-lo.
 
-# In[9]:
+# In[8]:
 
 
 plot_implicit(Eq(x**2/9 + y**2/4, 1), (x, -4, 4), ylim = (-4,4), size = (6,6)) # Elípse
@@ -115,7 +111,7 @@ plot_implicit(Eq(x**2/9 + y**2/4, 1), (x, -4, 4), ylim = (-4,4), size = (6,6)) #
 # 
 # Utilizando funções de duas variáveis, nós conseguimos fazer plots em 3d com a função `plot3d()`.
 
-# In[21]:
+# In[9]:
 
 
 from sympy.plotting import plot3d # Caso queira importá-la diretamente
@@ -124,8 +120,32 @@ plot3d(x**2 + y**2)
 
 # Os parâmetros são muito parecidos com a função `plot()`
 
-# In[29]:
+# In[10]:
 
 
-plot3d(sin(x) + cos(y), size = (6,6))
+plot3d(100*(sin(x) + cos(y)), size = (6,6))
 
+
+# Além desses plots, há os plots paramétricos. Recomendo que dê uma olhada na documentação. No mais, é realmente simples criar plots no Sympy. 
+# 
+# ## Exercícios
+# 
+# 1. Faça o plot das seguintes funções, escolhendo os melhores valores para os parâmetros:
+# 
+# $$f(x) = 4x^2 - 3x + 26$$
+# 
+# $$g(x) = \log(x^2 + 10)$$
+# 
+# $$h(x) = 10x^4 + 7x^3 - 10x + 20$$
+# 
+# $$p(x) = \sin(x^2 - x\cdot \pi) + \cos\left(x + \dfrac{\pi}{6}\right)$$
+# 
+# 2. Faça o plot das seguintes equações, escolhendo os melhores valores para os parâmetros:
+# 
+# $$ 2x - 5y = 20$$
+# 
+# $$x^2 + y^2 = 60$$
+# 
+# $$\dfrac{x^2}{10} - \dfrac{y^2}{8} = 1$$
+# 
+# $$2x - 5y^2 = 10$$
