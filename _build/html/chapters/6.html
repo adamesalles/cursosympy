@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extras &#8212; Curso de SymPy</title>
+    <title>4. Extras &#8212; Curso de SymPy</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"Loader": {"load": ["input/tex", "output/svg"]}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3. Criando Gráficos" href="5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,7 +112,7 @@
   Utilizando o SymPy
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="3.html">
    1. Primeiros Passos com o Sympy
@@ -123,6 +126,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="5.html">
    3. Criando Gráficos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Extras
   </a>
  </li>
 </ul>
@@ -202,11 +210,48 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/adamesalles/cursosympy/main?urlpath=tree/chapters/6.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometria">
+   4.1. Geometria
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d">
+     2D
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -216,7 +261,540 @@
               <div>
                 
   <div class="section" id="extras">
-<h1>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>Extras<a class="headerlink" href="#extras" title="Permalink to this headline">¶</a></h1>
+<p>Como a principal intenção do curso é prepará-los para o uso de <code class="docutils literal notranslate"><span class="pre">SymPy</span></code> nas disciplinas que envolvem Cálculo, ao finalizar o capítulo anterior você deve estar pronto para resolver seus problemas utilizando esse módulo. Contudo, eu acredito que há muito a se falar sobre esse módulo. E, portanto, esse capítulo fará uma abordagem rápida sobre algumas coisas que são possíveis com ele.</p>
+<div class="section" id="geometria">
+<h2><span class="section-number">4.1. </span>Geometria<a class="headerlink" href="#geometria" title="Permalink to this headline">¶</a></h2>
+<p>Isso mesmo, nós podemos resolver problemas de Geometria tanto de forma simbólica, como de forma numérica. A ideia principal não é ficar criando plots com o sistema completo, mas sim trabalhar matemáticamente (indo para o lado da Geometria Analítica).</p>
+<p>Antes de começarmos essa seção e as próximas, faremos as devidas importações e definições:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sympy.geometry</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># Importante garantir que foi importado corretamente</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">)</span>
+<span class="n">init_printing</span><span class="p">(</span><span class="n">use_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_latex</span><span class="o">=</span><span class="s1">&#39;mathjax&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="d">
+<h3>2D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h3>
+<p>Começando pela geometria em 2D, podemos seguir o processo de criar os pontos, as linhas (a partir dos pontos) e as formas 2D a partir dos segmentos. É bem simples e intuitivo, veja:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">O</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Você pode fazer as operações padrões entre pontos normalmente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">-</span> <span class="n">A</span> <span class="c1">## AB</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Point2D\left(2, -6\right)\]</div>
+</div>
+</div>
+<p>Contudo, o indicado é utilizar as classes, que já terão suas propriedades a fácil acesso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Segment</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span> <span class="c1">## AB Simbólicamente</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_7_0.svg" src="../_images/6_7_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AC</span> <span class="o">=</span> <span class="n">Segment</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="n">AC</span><span class="o">.</span><span class="n">slope</span> <span class="c1">## inclinação</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{1}{3}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AC</span><span class="o">.</span><span class="n">length</span> <span class="c1">## comprimento</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{10}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AC</span><span class="o">.</span><span class="n">midpoint</span> <span class="c1">## ponto médio</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Point2D\left(- \frac{1}{2}, \frac{5}{2}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AC</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1">## Contém A?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{True}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AC</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1">## Menor distância ao ponto B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sqrt{10}\]</div>
+</div>
+</div>
+<p>Nós podemos criar linhas também</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Line</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_14_0.svg" src="../_images/6_14_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+<span class="n">l1</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span> <span class="c1">## Equação da reta = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 6 x + 2 y - 10\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span><span class="o">.</span><span class="n">coefficients</span> <span class="c1">## Coeficientes da reta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left( 6, \  2, \  -10\right)\]</div>
+</div>
+</div>
+<p>Podemos criar uma reta ao dar um ponto inicial e uma inclinação, lembrando que: <span class="math notranslate nohighlight">\(y - y_0 = m(x-x_0)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l2</span> <span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">l2</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - 3 x + y - 9\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l3</span> <span class="o">=</span> <span class="n">l2</span><span class="o">.</span><span class="n">perpendicular_line</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1">## Retorna uma reta perpendicular que passa pelo ponto dado</span>
+<span class="n">l3</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - x - 3 y + 7\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l3</span><span class="o">.</span><span class="n">slope</span> <span class="c1"># -m^-1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{1}{3}\]</div>
+</div>
+</div>
+<p>E nós podemos ver a intersecção entre duas entidades geométricas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intersection</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span><span class="n">l3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[ Point2D\left(-2, 3\right)\right]\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intersection</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span> <span class="c1"># Ponto A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[ Point2D\left(1, 2\right)\right]\]</div>
+</div>
+</div>
+<p>Para plotar, de modo geral, fazemos o uso do que aprendemos no último capítulo, a função <code class="docutils literal notranslate"><span class="pre">plot_implicit</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_implicit</span><span class="p">(</span><span class="n">l1</span><span class="o">.</span><span class="n">equation</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_25_0.png" src="../_images/6_25_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f0748fd47d0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos criar figuras geométricas e encontrar suas áreas e verficiar intersecções. Veja os exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span> <span class="o">=</span> <span class="n">Triangle</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span> <span class="c1"># Cria um Triângulo</span>
+<span class="n">trig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_27_0.svg" src="../_images/6_27_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">area</span> <span class="c1">## Não utiliza valores absolutos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -8\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="n">trig</span><span class="o">.</span><span class="n">area</span><span class="p">)</span> <span class="c1">## Correto</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">perimeter</span> <span class="c1">## Perímetro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{74} + 3 \sqrt{10}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">orthocenter</span> <span class="c1">## Centro Ortogonal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Point2D\left(\frac{25}{4}, \frac{23}{4}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">circumcenter</span> <span class="c1">## Circuncentro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Point2D\left(- \frac{17}{8}, - \frac{19}{8}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">altitudes</span> <span class="c1">## Alturas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{ Point2D\left(-2, 3\right) : Segment2D\left(Point2D\left(-2, 3\right), Point2D\left(\frac{2}{5}, \frac{19}{5}\right)\right), \  Point2D\left(1, 2\right) : Segment2D\left(Point2D\left(1, 2\right), Point2D\left(- \frac{19}{37}, \frac{34}{37}\right)\right), \  Point2D\left(3, -4\right) : Segment2D\left(Point2D\left(3, -4\right), Point2D\left(\frac{23}{5}, \frac{4}{5}\right)\right)\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">incircle</span> <span class="c1">## Círculo interno</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_34_0.svg" src="../_images/6_34_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">incircle</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - \frac{- \sqrt{10} + \sqrt{74}}{\sqrt{74} + 3 \sqrt{10}}\right)^{2} + \left(y - \frac{2 \left(\sqrt{10} + \sqrt{74}\right)}{\sqrt{74} + 3 \sqrt{10}}\right)^{2} - \frac{256}{\left(\sqrt{74} + 3 \sqrt{10}\right)^{2}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">bisectors</span><span class="p">()</span> <span class="c1">## Bissetrizes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{ Point2D\left(-2, 3\right) : Segment2D\left(Point2D\left(-2, 3\right), Point2D\left(\frac{11}{16} + \frac{\sqrt{185}}{16}, \frac{47}{16} - \frac{3 \sqrt{185}}{16}\right)\right), \  Point2D\left(1, 2\right) : Segment2D\left(Point2D\left(1, 2\right), Point2D\left(- \frac{1}{3}, \frac{2}{3}\right)\right), \  Point2D\left(3, -4\right) : Segment2D\left(Point2D\left(3, -4\right), Point2D\left(\frac{77}{17} - \frac{6 \sqrt{185}}{17}, \frac{14}{17} + \frac{2 \sqrt{185}}{17}\right)\right)\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">bisectors</span><span class="p">()[</span><span class="n">A</span><span class="p">]</span> <span class="c1">## Bissetriz que passa no ponto A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_37_0.svg" src="../_images/6_37_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">is_right</span><span class="p">()</span> <span class="c1">## É triângulo retângulo?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trig</span><span class="o">.</span><span class="n">is_scalene</span><span class="p">()</span> <span class="c1">## É triângulo escaleno?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circ</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">## Centro e Raio</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 1\right)^{2} + \left(y - 2\right)^{2} - 9\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circ</span><span class="o">.</span><span class="n">circumference</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 6 \pi\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circ</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 9 \pi\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intersection</span><span class="p">(</span><span class="n">trig</span><span class="p">,</span><span class="n">circ</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[ Point2D\left(- \frac{19}{37} + \frac{5 \sqrt{410}}{74}, \frac{34}{37} - \frac{7 \sqrt{410}}{74}\right), \  Point2D\left(1 - \frac{9 \sqrt{10}}{10}, \frac{3 \sqrt{10}}{10} + 2\right), \  Point2D\left(\frac{3 \sqrt{10}}{10} + 1, 2 - \frac{9 \sqrt{10}}{10}\right), \  Point2D\left(- \frac{5 \sqrt{410}}{74} - \frac{19}{37}, \frac{34}{37} + \frac{7 \sqrt{410}}{74}\right)\right]\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">## Centro, Raio Horizontal, Raio Vertical</span>
+<span class="n">elips</span><span class="o">.</span><span class="n">equation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(\frac{x}{3} - 1\right)^{2} + \left(\frac{y}{2} + 2\right)^{2} - 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">circumference</span> <span class="c1">## Não há formulas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 12 E\left(\frac{5}{9}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">circumference</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span> <span class="c1">## Valor numérico</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 15.8654395892906\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 6 \pi\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">eccentricity</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\sqrt{5}}{3}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">foci</span> <span class="c1">## Focos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left( Point2D\left(3 - \sqrt{5}, -4\right), \  Point2D\left(\sqrt{5} + 3, -4\right)\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elips</span><span class="o">.</span><span class="n">focus_distance</span> <span class="c1">## Distância Focal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{5}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">O</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<span class="n">quad</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_51_0.svg" src="../_images/6_51_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span><span class="o">.</span><span class="n">area</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{9}{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span><span class="o">.</span><span class="n">angles</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{ Point2D\left(-2, 3\right) : \operatorname{acos}{\left(\frac{31 \sqrt{962}}{962} \right)}, \  Point2D\left(0, 0\right) : \operatorname{acos}{\left(\frac{4 \sqrt{65}}{65} \right)}, \  Point2D\left(1, 2\right) : \frac{7 \pi}{4}, \  Point2D\left(3, -4\right) : - \operatorname{acos}{\left(\frac{13 \sqrt{185}}{185} \right)} + 2 \pi\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span><span class="o">.</span><span class="n">angles</span><span class="p">[</span><span class="n">A</span><span class="p">]</span> <span class="c1">## No ponto A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{7 \pi}{4}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.units</span> <span class="kn">import</span> <span class="n">degree</span> <span class="c1">## Importação das unidades</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">angles</span><span class="p">[</span><span class="n">A</span><span class="p">]</span><span class="o">/</span><span class="n">degree</span><span class="o">.</span><span class="n">scale_factor</span> <span class="c1">## Transforma em Graus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 315\]</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -244,6 +822,7 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="5.html" title="previous page"><span class="section-number">3. </span>Criando Gráficos</a>
 
         </div>
         
