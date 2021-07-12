@@ -297,14 +297,15 @@ elips.focus_distance ## Distância Focal
 # In[43]:
 
 
-quad = Polygon(O,A,B,C)
+D = Point(0,10)
+quad = Polygon(A,B,C,D)
 quad
 
 
-# In[44]:
+# In[48]:
 
 
-quad.area
+abs(quad.area)
 
 
 # In[45]:
@@ -319,7 +320,7 @@ quad.angles
 quad.angles[A] ## No ponto A
 
 
-# In[51]:
+# In[47]:
 
 
 from sympy.physics.units import degree ## Importação das unidades

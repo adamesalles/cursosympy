@@ -469,7 +469,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/6_25_0.png" src="../_images/6_25_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f0748fd47d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fc3cc8bf1d0&gt;
 </pre></div>
 </div>
 </div>
@@ -740,7 +740,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">O</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">quad</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">)</span>
 <span class="n">quad</span>
 </pre></div>
 </div>
@@ -750,13 +751,13 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad</span><span class="o">.</span><span class="n">area</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle - \frac{9}{2}\]</div>
+\[\displaystyle \frac{39}{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -767,7 +768,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left\{ Point2D\left(-2, 3\right) : \operatorname{acos}{\left(\frac{31 \sqrt{962}}{962} \right)}, \  Point2D\left(0, 0\right) : \operatorname{acos}{\left(\frac{4 \sqrt{65}}{65} \right)}, \  Point2D\left(1, 2\right) : \frac{7 \pi}{4}, \  Point2D\left(3, -4\right) : - \operatorname{acos}{\left(\frac{13 \sqrt{185}}{185} \right)} + 2 \pi\right\}\]</div>
+\[\displaystyle \left\{ Point2D\left(-2, 3\right) : - \operatorname{acos}{\left(- \frac{39 \sqrt{3922}}{3922} \right)} + 2 \pi, \  Point2D\left(0, 10\right) : - \operatorname{acos}{\left(\frac{54 \sqrt{3445}}{3445} \right)} + 2 \pi, \  Point2D\left(1, 2\right) : \operatorname{acos}{\left(- \frac{5 \sqrt{26}}{26} \right)}, \  Point2D\left(3, -4\right) : - \operatorname{acos}{\left(\frac{13 \sqrt{185}}{185} \right)} + 2 \pi\right\}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -778,7 +779,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{7 \pi}{4}\]</div>
+\[\displaystyle \operatorname{acos}{\left(- \frac{5 \sqrt{26}}{26} \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -790,7 +791,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 315\]</div>
+\[\displaystyle \frac{180 \operatorname{acos}{\left(- \frac{5 \sqrt{26}}{26} \right)}}{\pi}\]</div>
 </div>
 </div>
 </div>
