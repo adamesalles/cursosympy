@@ -230,99 +230,176 @@ trig.is_scalene() ## É triângulo escaleno?
 
 
 circ = Circle(A, 3) ## Centro e Raio
-circ.equation()
+circ
 
 
 # In[33]:
 
 
-circ.circumference
+circ.equation()
 
 
 # In[34]:
 
 
-circ.area
+circ.circumference
 
 
 # In[35]:
 
 
-intersection(trig,circ)
+circ.area
 
 
 # In[36]:
 
 
-elips = Ellipse(B, 3, 2) ## Centro, Raio Horizontal, Raio Vertical
-elips.equation()
+intersection(trig,circ)
 
 
 # In[37]:
 
 
-elips.circumference ## Não há formulas
+elips = Ellipse(B, 3, 2) ## Centro, Raio Horizontal, Raio Vertical
+elips
 
 
 # In[38]:
 
 
-elips.circumference.evalf() ## Valor numérico
+elips.equation()
 
 
 # In[39]:
 
 
-elips.area
+elips.circumference ## Não há formulas
 
 
 # In[40]:
 
 
-elips.eccentricity
+elips.circumference.evalf() ## Valor numérico
 
 
 # In[41]:
 
 
-elips.foci ## Focos
+elips.area
 
 
 # In[42]:
 
 
-elips.focus_distance ## Distância Focal
+elips.eccentricity
 
 
 # In[43]:
 
 
-D = Point(0,10)
-quad = Polygon(A,B,C,D)
-quad
+elips.foci ## Focos
 
 
-# In[48]:
+# In[44]:
 
 
-abs(quad.area)
+elips.focus_distance ## Distância Focal
 
 
 # In[45]:
 
 
-quad.angles
+D = Point(0,10)
+quad = Polygon(A,B,C,D) ## Criando Polígono de N vértices
+quad
 
 
 # In[46]:
 
 
-quad.angles[A] ## No ponto A
+abs(quad.area)
 
 
 # In[47]:
 
 
+quad.angles
+
+
+# In[48]:
+
+
+quad.angles[A] ## No ponto A
+
+
+# In[49]:
+
+
 from sympy.physics.units import degree ## Importação das unidades
-quad.angles[A]/degree.scale_factor ## Transforma em Graus
+(quad.angles[A]/degree.scale_factor).evalf() ## Transforma em Graus
+
+
+# In[64]:
+
+
+reg = RegularPolygon(A,1,4) # Centro, Raio, Qtd. Lados
+reg
+
+
+# In[65]:
+
+
+reg.angles # Retângulo
+
+
+# In[63]:
+
+
+reg.vertices # Vértices
+
+
+# Para finalizar com a Geometria, é importante relembrar que é possível fazer tudo isso com valores simbólicos. Por exemplo, um quadrado em função de um lado $x$:
+
+# In[59]:
+
+
+sim_quad = Polygon(Point(x/2, x/2), Point(-x/2, x/2),Point(-x/2, -x/2),Point(x/2, -x/2))
+sim_quad
+
+
+# In[57]:
+
+
+sim_quad.area
+
+
+# ### 3D
+# 
+# Para a terceira dimensão, podemos utilizar os Pontos com três coordenadas para gerar nossas formas.
+
+# In[76]:
+
+
+M = Point(1, 2, 3)
+N = Point(-2, 3, 4)
+P = Point(5, -8, 10)
+Line(M,N)
+
+
+# In[77]:
+
+
+Line(M,N).equation()
+
+
+# In[80]:
+
+
+Plane(M,N,P) # Plano
+
+
+# In[74]:
+
+
+Plane(M,N,P).equation()
 

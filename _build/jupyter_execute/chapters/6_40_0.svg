@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="100.0" height="100.0" viewBox="-2.60000000000000 -1.60000000000000 7.20000000000000 7.20000000000000"
+            preserveAspectRatio="xMinYMin meet">
+            <defs>
+                <marker id="markerCircle" markerWidth="8" markerHeight="8"
+                    refx="5" refy="5" markerUnits="strokeWidth">
+                    <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+                </marker>
+                <marker id="markerArrow" markerWidth="13" markerHeight="13" refx="2" refy="4"
+                       orient="auto" markerUnits="strokeWidth">
+                    <path d="M2,2 L2,6 L6,4" style="fill: #000000;" />
+                </marker>
+                <marker id="markerReverseArrow" markerWidth="13" markerHeight="13" refx="6" refy="4"
+                       orient="auto" markerUnits="strokeWidth">
+                    <path d="M6,2 L6,6 L2,4" style="fill: #000000;" />
+                </marker>
+            </defs><g transform="matrix(1,0,0,-1,0,4.00000000000000)"><ellipse fill="#66cc99" stroke="#555555" stroke-width="0.144000000000000" opacity="0.6" cx="1.00000000000000" cy="2.00000000000000" rx="3.00000000000000" ry="3.00000000000000"/></g></svg>
