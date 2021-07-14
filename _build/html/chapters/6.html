@@ -254,6 +254,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reacoes-em-vigas-mecanica">
+   4.2. Reações em Vigas (Mecânica)
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -474,7 +479,7 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/6_25_0.png" src="../_images/6_25_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f3bc80f0e10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f9593fee1d0&gt;
 </pre></div>
 </div>
 </div>
@@ -923,6 +928,122 @@
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle 17 x + 25 y + 26 z - 145\]</div>
 </div>
+</div>
+</div>
+</div>
+<div class="section" id="reacoes-em-vigas-mecanica">
+<h2><span class="section-number">4.2. </span>Reações em Vigas (Mecânica)<a class="headerlink" href="#reacoes-em-vigas-mecanica" title="Permalink to this headline">¶</a></h2>
+<p>Nós podemos analisar as tensões em vigas utilizando o <code class="docutils literal notranslate"><span class="pre">sympy.physics.continuum_mechanics</span></code>. Caso você procure aplicar carregamento em uma viga e então avaliar as reações e seus gráficos, certamente isso vai te auxiliar.</p>
+<p>Veja um exemplo (no caso, para fazer sentido, leva os mesmos valores de um exemplo da documentação):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.continuum_mechanics.beam</span> <span class="kn">import</span> <span class="n">Beam</span>
+<span class="n">E</span><span class="p">,</span> <span class="n">I</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;E I&#39;</span><span class="p">)</span> <span class="c1">## Símbolos para o Módulo de Elasticidade e o Momento de Inércia</span>
+<span class="n">R1</span><span class="p">,</span> <span class="n">R2</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;R1 R2&#39;</span><span class="p">)</span> <span class="c1">## Símbolos para as forças</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Beam</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">## Criando a viga (comprimento, E, I)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_load</span><span class="p">(</span><span class="n">R1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">## Aplicando carregamentos (intensidade, início, ordem)</span>
+<span class="c1">###</span>
+<span class="c1">### Momentos, order = -2</span>
+<span class="c1">### Forças Pontuais, order =-1</span>
+<span class="c1">### Forças distribuídas linearmente, order = 0</span>
+<span class="c1">### Veja os outros na documentação</span>
+<span class="c1">###</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_load</span><span class="p">(</span><span class="n">R1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_load</span><span class="p">(</span><span class="n">R2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_load</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_load</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">load</span> <span class="c1">## Carregamento</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle R_{1} {\left\langle x \right\rangle}^{-1} + R_{1} {\left\langle x - 10 \right\rangle}^{-1} + R_{2} {\left\langle x - 30 \right\rangle}^{-1} + 90 {\left\langle x - 5 \right\rangle}^{0} - 90 {\left\langle x - 23 \right\rangle}^{0} + 10 {\left\langle x - 30 \right\rangle}^{1} - 200 {\left\langle x - 50 \right\rangle}^{0} - 10 {\left\langle x - 50 \right\rangle}^{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">shear_force</span><span class="p">()</span> <span class="c1">## Força Cortante</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - M_{0} {\left\langle x \right\rangle}^{-1} - R_{0} {\left\langle x \right\rangle}^{0} - R_{20} {\left\langle x - 20 \right\rangle}^{0} - R_{50} {\left\langle x - 50 \right\rangle}^{0} - \frac{224 {\left\langle x \right\rangle}^{0}}{15} - 90 {\left\langle x - 5 \right\rangle}^{1} - \frac{224 {\left\langle x - 10 \right\rangle}^{0}}{15} + 90 {\left\langle x - 23 \right\rangle}^{1} + \frac{54748 {\left\langle x - 30 \right\rangle}^{0}}{15} - 5 {\left\langle x - 30 \right\rangle}^{2} + 200 {\left\langle x - 50 \right\rangle}^{1} + 5 {\left\langle x - 50 \right\rangle}^{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">bending_moment</span><span class="p">()</span> <span class="c1">## Momento Fletor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - M_{0} {\left\langle x \right\rangle}^{0} - R_{0} {\left\langle x \right\rangle}^{1} - R_{20} {\left\langle x - 20 \right\rangle}^{1} - R_{50} {\left\langle x - 50 \right\rangle}^{1} - \frac{224 {\left\langle x \right\rangle}^{1}}{15} - 45 {\left\langle x - 5 \right\rangle}^{2} - \frac{224 {\left\langle x - 10 \right\rangle}^{1}}{15} + 45 {\left\langle x - 23 \right\rangle}^{2} + \frac{54748 {\left\langle x - 30 \right\rangle}^{1}}{15} - \frac{5 {\left\langle x - 30 \right\rangle}^{3}}{3} + 100 {\left\langle x - 50 \right\rangle}^{2} + \frac{5 {\left\langle x - 50 \right\rangle}^{3}}{3}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1">## Ilustração Gráfica</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_73_0.png" src="../_images/6_73_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">solve_for_reaction_loads</span><span class="p">(</span><span class="n">R1</span><span class="p">,</span> <span class="n">R2</span><span class="p">)</span> <span class="c1">## Solucionando</span>
+<span class="n">b</span><span class="o">.</span><span class="n">plot_bending_moment</span><span class="p">()</span> <span class="c1">## Plot Momento Fletor</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_74_0.png" src="../_images/6_74_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f9576b37cd0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">plot_shear_force</span><span class="p">()</span> <span class="c1">## Plotando Força Cortante</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_75_0.png" src="../_images/6_75_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f9576c90d50&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">apply_support</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;pin&#39;</span><span class="p">)</span> <span class="c1">## Criando apoios</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_support</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;fixed&#39;</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">apply_support</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;roller&#39;</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">load</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle M_{0} {\left\langle x \right\rangle}^{-2} + R_{0} {\left\langle x \right\rangle}^{-1} + R_{20} {\left\langle x - 20 \right\rangle}^{-1} + R_{50} {\left\langle x - 50 \right\rangle}^{-1} + \frac{224 {\left\langle x \right\rangle}^{-1}}{15} + 90 {\left\langle x - 5 \right\rangle}^{0} + \frac{224 {\left\langle x - 10 \right\rangle}^{-1}}{15} - 90 {\left\langle x - 23 \right\rangle}^{0} - \frac{54748 {\left\langle x - 30 \right\rangle}^{-1}}{15} + 10 {\left\langle x - 30 \right\rangle}^{1} - 200 {\left\langle x - 50 \right\rangle}^{0} - 10 {\left\langle x - 50 \right\rangle}^{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6_77_0.png" src="../_images/6_77_0.png" />
 </div>
 </div>
 </div>

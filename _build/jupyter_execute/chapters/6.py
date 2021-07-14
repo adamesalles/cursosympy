@@ -339,20 +339,20 @@ from sympy.physics.units import degree ## Importação das unidades
 (quad.angles[A]/degree.scale_factor).evalf() ## Transforma em Graus
 
 
-# In[64]:
+# In[50]:
 
 
 reg = RegularPolygon(A,1,4) # Centro, Raio, Qtd. Lados
 reg
 
 
-# In[65]:
+# In[51]:
 
 
 reg.angles # Retângulo
 
 
-# In[63]:
+# In[52]:
 
 
 reg.vertices # Vértices
@@ -360,14 +360,14 @@ reg.vertices # Vértices
 
 # Para finalizar com a Geometria, é importante relembrar que é possível fazer tudo isso com valores simbólicos. Por exemplo, um quadrado em função de um lado $x$:
 
-# In[59]:
+# In[53]:
 
 
 sim_quad = Polygon(Point(x/2, x/2), Point(-x/2, x/2),Point(-x/2, -x/2),Point(x/2, -x/2))
 sim_quad
 
 
-# In[57]:
+# In[54]:
 
 
 sim_quad.area
@@ -377,7 +377,7 @@ sim_quad.area
 # 
 # Para a terceira dimensão, podemos utilizar os Pontos com três coordenadas para gerar nossas formas.
 
-# In[76]:
+# In[55]:
 
 
 M = Point(1, 2, 3)
@@ -386,20 +386,95 @@ P = Point(5, -8, 10)
 Line(M,N)
 
 
-# In[77]:
+# In[56]:
 
 
 Line(M,N).equation()
 
 
-# In[80]:
+# In[57]:
 
 
 Plane(M,N,P) # Plano
 
 
-# In[74]:
+# In[58]:
 
 
 Plane(M,N,P).equation()
+
+
+# ## Reações em Vigas (Mecânica)
+# 
+# Nós podemos analisar as tensões em vigas utilizando o `sympy.physics.continuum_mechanics`. Caso você procure aplicar carregamento em uma viga e então avaliar as reações e seus gráficos, certamente isso vai te auxiliar.
+# 
+# Veja um exemplo (no caso, para fazer sentido, leva os mesmos valores de um exemplo da documentação):
+
+# In[84]:
+
+
+from sympy.physics.continuum_mechanics.beam import Beam
+E, I = symbols('E I') ## Símbolos para o Módulo de Elasticidade e o Momento de Inércia
+R1, R2 = symbols('R1 R2') ## Símbolos para as forças
+b = Beam(50, 20, 30) ## Criando a viga (comprimento, E, I)
+b.apply_load(R1, 0, -1) ## Aplicando carregamentos (intensidade, início, ordem)
+###
+### Momentos, order = -2
+### Forças Pontuais, order =-1
+### Forças distribuídas linearmente, order = 0
+### Veja os outros na documentação
+###
+b.apply_load(R1, 10, -1)
+b.apply_load(R2, 30, -1)
+b.apply_load(90, 5, 0, 23)
+b.apply_load(10, 30, 1, 50)
+b.load ## Carregamento
+
+
+# In[81]:
+
+
+b.shear_force() ## Força Cortante
+
+
+# In[82]:
+
+
+b.bending_moment() ## Momento Fletor
+
+
+# In[86]:
+
+
+p = b.draw()
+p.show() ## Ilustração Gráfica
+
+
+# In[85]:
+
+
+b.solve_for_reaction_loads(R1, R2) ## Solucionando
+b.plot_bending_moment() ## Plot Momento Fletor
+
+
+# In[87]:
+
+
+b.plot_shear_force() ## Plotando Força Cortante
+
+
+# In[88]:
+
+
+b.apply_support(50, 'pin') ## Criando apoios
+b.apply_support(0, 'fixed')
+b.apply_support(20, 'roller')
+b.load
+
+
+# In[89]:
+
+
+p = b.draw()
+p.show()
 

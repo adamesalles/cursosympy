@@ -149,6 +149,12 @@ limit(1/x, x, 0, '-')
 # In[19]:
 
 
+limit(1/x, x, 0, '+-') # Dois lados
+
+
+# In[20]:
+
+
 my_sin = Limit(sin(x)/x, x, 0, '+')
 my_sin.doit() # Método doit() calcula uma expressão.
 
@@ -157,50 +163,50 @@ my_sin.doit() # Método doit() calcula uma expressão.
 # 
 # Assim com os limites, podemos criar a derivada (sem calculá-la) através da classe `Derivative()`. E calcular diretamente através da `diff()`.
 
-# In[20]:
+# In[21]:
 
 
 Derivative(exp(2*x**3),x)
 
 
-# In[21]:
+# In[22]:
 
 
 diff(sin(x**2),x)
 
 
-# In[22]:
+# In[23]:
 
 
 diff(sin(x**2),x, x) ## Calcular a segunda derivada
 
 
-# In[23]:
+# In[24]:
 
 
 diff(sin(x**2),x, x, x) ## Calcular a terceira derivada
 
 
-# In[24]:
+# In[25]:
 
 
 diff(sin(x**2),x, 3) ## Calcular a terceira derivada de outra forma
 
 
-# In[25]:
+# In[26]:
 
 
 diff(sin(x**2),x, 10) ## Calcular a décima derivada
 
 
-# In[26]:
+# In[27]:
 
 
 my_deriv = Derivative(exp(2*x**3),x)
 my_deriv.doit()
 
 
-# In[27]:
+# In[28]:
 
 
 ## Podemos, com o método diff()
@@ -208,7 +214,7 @@ expr = exp(2*x**3)
 expr.diff(x)
 
 
-# In[28]:
+# In[29]:
 
 
 expr.diff(x,3) # Terceira derivada
@@ -220,38 +226,38 @@ expr.diff(x,3) # Terceira derivada
 # 
 # O `Sympy` não acresce a constante de integração nas Integrais Indefinidas, então é importante se lembrar delaa quando for resolver algum exercício.
 
-# In[29]:
+# In[30]:
 
 
 Integral(1/x, x)
 
 
-# In[30]:
+# In[31]:
 
 
 Integral(1/x, (x, 1, 10)) # Note que passamos (simbolo, inf, sup)
 
 
-# In[31]:
+# In[32]:
 
 
 integrate(1/x, (x,1,10))
 
 
-# In[32]:
+# In[33]:
 
 
 my_integral = Integral(1/x + 1/y, (x, 1, 10), (y, 1, 10)) # Integral dupla, duas variáveis.
 my_integral
 
 
-# In[33]:
+# In[34]:
 
 
 my_integral.doit()
 
 
-# In[34]:
+# In[35]:
 
 
 Integral(exp(x**2 - 10), x,x) # Integral dupla indefinida, mesma variável
@@ -263,7 +269,7 @@ Integral(exp(x**2 - 10), x,x) # Integral dupla indefinida, mesma variável
 # 
 # Você pode utilizar o método `series()` em uma expressão para fazer sua expansão em série.
 
-# In[35]:
+# In[36]:
 
 
 asin(x).series(x,0, 10) # (x, x_0, n)
@@ -273,7 +279,7 @@ asin(x).series(x,0, 10) # (x, x_0, n)
 # 
 # Ao criar uma função simbólica, você pode utilizar derivadas e a função `dsolve()` para encontrar a solução de uma expressão e ou equação diferencial. Nesse caso, o `SymPy` insere as constantes quando necessário.
 
-# In[36]:
+# In[37]:
 
 
 f = Function('f')
@@ -281,7 +287,7 @@ my_deq = Eq(Derivative(f(x),x,2),f(x))
 my_deq
 
 
-# In[37]:
+# In[38]:
 
 
 dsolve(my_deq)
