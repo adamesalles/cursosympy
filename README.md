@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/Made%20by-Eduardo%20Adame-FA8072?style=for-the-badge) ![](https://img.shields.io/github/commit-activity/m/adamesalles/cursosympy?style=for-the-badge) ![](https://img.shields.io/github/last-commit/adamesalles/cursosympy?style=for-the-badge)
 
-Faça uma melhor leitura do repositório através do [nbviewer](https://nbviewer.jupyter.org/github/adamesalles/cursosympy/tree/main/).
+Esse repositório tem os arquivos utilizados para o curso mantido no site <https://www.adame.live/cursosympy>. 
 
 ## Sumário
 
