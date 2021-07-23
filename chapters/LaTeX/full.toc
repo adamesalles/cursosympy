@@ -1,0 +1,66 @@
+\babel@toc {brazilian}{}
+\contentsline {section}{\numberline {1}Conhecendo e Preparando o Ambiente}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introdução}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Escolhendo um Ambiente}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Instalando o Ambiente (1ª Opção)}{4}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Windows}{4}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Linux}{5}{subsubsection.1.3.2}
+\contentsline {subsection}{\numberline {1.4}Instalando o Ambiente (2ª Opção)}{5}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Windows}{5}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Linux}{5}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Como acompanhar as explicações do curso}{6}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Exercícios}{6}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Próximos passos}{7}{subsection.1.7}
+\contentsline {section}{\numberline {2}Básicos da Programação em Python}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sobre o Python}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Definindo variáveis}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Tipos de Variáveis}{8}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Inteiros}{8}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Floats}{9}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Strings}{9}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Booleanos}{9}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Listas}{9}{subsubsection.2.3.5}
+\contentsline {subsection}{\numberline {2.4}Operações}{10}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Aritmética}{10}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Booleanas}{11}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Strings}{12}{subsubsection.2.4.3}
+\contentsline {paragraph}{Strings formatadas}{12}{section*.2}
+\contentsline {subsection}{\numberline {2.5}Conversão de Tipos}{13}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Recebendo entrada do usuário}{14}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Condições}{14}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}If}{14}{subsubsection.2.7.1}
+\contentsline {subsection}{\numberline {2.8}Métodos}{15}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Estruturas de Repetição}{17}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Funções}{18}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}Exercícios}{20}{subsection.2.11}
+\contentsline {section}{\numberline {3}Primeiros Passos com o Sympy}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}Instalação}{20}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Carregando o Módulo}{21}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Trabalhando com expressões matemáticas}{21}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Equações}{24}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Igualdade}{24}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Sistemas de Equações}{25}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}Matrizes}{25}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Exercícios}{27}{subsection.3.5}
+\contentsline {section}{\numberline {4}Aplicações em Cálculo Diferencial e Integral}{28}{section.4}
+\contentsline {subsection}{\numberline {4.1}Intervalos}{28}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Análises de Domínio/Intervalo}{29}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Verificar se é crescente ou decrescente.}{29}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {4.3}Limites}{30}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Derivadas}{30}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Integrais}{31}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Outras funções}{32}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Séries}{32}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}Equações Diferenciais}{32}{subsubsection.4.6.2}
+\contentsline {subsection}{\numberline {4.7}Exercícios}{33}{subsection.4.7}
+\contentsline {section}{\numberline {5}Criando Gráficos}{34}{section.5}
+\contentsline {subsection}{\numberline {5.1}Plot 2D}{34}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Funções}{34}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Equações Implícitas}{40}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Plot 3D}{42}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Exercícios}{44}{subsection.5.3}
+\contentsline {section}{\numberline {6}Extras}{45}{section.6}
+\contentsline {subsection}{\numberline {6.1}Geometria}{45}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}2D}{46}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}3D}{52}{subsubsection.6.1.2}
+\contentsline {subsection}{\numberline {6.2}Reações em Vigas (Mecânica)}{52}{subsection.6.2}
