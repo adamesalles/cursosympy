@@ -1,4 +1,4 @@
-\documentclass[11pt, brazilian]{article}
+\documentclass[a4paper, 11pt, brazilian]{article}
 
     \usepackage[breakable]{tcolorbox}
     \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
@@ -64,6 +64,7 @@
     \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                                 % normalem makes italics be italics, not underlines
     \usepackage{mathrsfs}
+    \usepackage{pdfpages}
     
 
     
@@ -366,7 +367,7 @@
 
 \begin{document}
     
-    \maketitle
+    \includepdf{cover.pdf}
     \newpage
     \tableofcontents
     \newpage
