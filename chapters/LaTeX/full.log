@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.7.23)  3 AUG 2021 03:26
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.7.23)  26 AUG 2021 03:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,9 +1470,24 @@ File: cover.pdf Graphic file (type pdf)
 
 [1
 
-] (./full.toc
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 386.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 386.
+ [2]
+File: lav.jpg Graphic file (type bmp)
+<lav.jpg>
+File: std.png Graphic file (type bmp)
+<std.png>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 410.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 410.
+ [3] (./full.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
@@ -1489,714 +1504,714 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
- [2])
+ [1])
 \tf@toc=\write8
 \openout8 = `full.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 373.
+(babel)             in language  on input line 414.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 373.
+(babel)             in language  on input line 414.
+ [2]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 420.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 423.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 439.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 474.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 477.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 492.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 497.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 497.
+ [1]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 507.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 513.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 553.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 576.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 576.
+
+[2]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 593.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 632.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 646.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 653.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 656.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 662.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 662.
  [3]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 377.
+(babel)             in language  on input line 723.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 753.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 396.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 431.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 434.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 449.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 454.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 454.
+(babel)             in language  on input line 753.
  [4]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 464.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 470.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 510.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 533.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 533.
-
-[5]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 550.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 589.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 603.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 610.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 613.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 619.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 619.
- [6]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 680.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 710.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 710.
- [7]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 757.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 770.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 792.
+(babel)             in language  on input line 800.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 813.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 826.
+(babel)             in language  on input line 835.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 826.
+(babel)             in language  on input line 856.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 869.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 869.
+ [5]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 879.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 888.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 902.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 971.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 978.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 978.
+ [6]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 978.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1084.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1084.
+ [7]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1087.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1232.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1232.
  [8]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 836.
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 845.
+(babel)             in language  on input line 1242.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 859.
+(babel)             in language  on input line 1311.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 928.
+(babel)             in language  on input line 1368.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 935.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 935.
+(babel)             in language  on input line 1368.
  [9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 935.
+(babel)             in language  on input line 1442.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1041.
+(babel)             in language  on input line 1499.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1041.
+(babel)             in language  on input line 1505.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1505.
  [10]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1044.
+(babel)             in language  on input line 1512.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1189.
+(babel)             in language  on input line 1596.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1189.
+(babel)             in language  on input line 1596.
  [11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1199.
+(babel)             in language  on input line 1603.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1268.
+(babel)             in language  on input line 1692.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1325.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1325.
+(babel)             in language  on input line 1692.
  [12]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1399.
+(babel)             in language  on input line 1779.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1456.
+(babel)             in language  on input line 1811.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1462.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1462.
+(babel)             in language  on input line 1811.
  [13]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1469.
+(babel)             in language  on input line 1870.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1553.
+(babel)             in language  on input line 1895.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1553.
+(babel)             in language  on input line 1895.
  [14]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1560.
+(babel)             in language  on input line 1980.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1649.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1649.
+(babel)             in language  on input line 1980.
  [15]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1736.
+(babel)             in language  on input line 2039.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1768.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1768.
- [16]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1827.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1852.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1852.
- [17]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1937.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1937.
- [18]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1996.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2026.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2029.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2035.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2035.
- [19]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2050.
+(babel)             in language  on input line 2069.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2072.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2078.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2078.
+ [16]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2093.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2115.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2098--2100
+Underfull \hbox (badness 10000) in paragraph at lines 2141--2143
 []\TU/lmtt/m/n/10.95 Note que nossa saída matemática será processada por um com
 pilador $[]$ para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2101--2103
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2146
 []\TU/lmtt/m/n/10.95 No caso, você pode utilizar x como um número, e as express
 ões aparecerão
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2165
 []\TU/lmtt/m/n/10.95 Caso você queira a solução de uma expressão que seja igual
  a 0 (ou suas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2165
 \TU/lmtt/m/n/10.95 raízes, em outras palavras), em respeito a uma variável, voc
 ê pode usar a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2165
 \TU/lmtt/m/n/10.95 função solve(). Ela recebe dois parâmetros obrigatórios, sua
  expressão e a
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2122.
+(babel)             in language  on input line 2165.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2122.
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2157
+(babel)             in language  on input line 2165.
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2200
 []\TU/lmtt/m/n/10.95 Inclusive, caso queira uma resposta como costumamos escrev
 er no papel, ou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2200
 \TU/lmtt/m/n/10.95 seja, em forma de conjunto e suas condições, podemos utiliza
 r o solveset().
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2200
 \TU/lmtt/m/n/10.95 A maior diferença é que ele pode receber o conjunto numérico
  onde você quer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2157
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2200
 \TU/lmtt/m/n/10.95 trabalhar através do parâmetro domain. Na maioria das vezes 
 podemos utilizar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2200--2202
+Underfull \hbox (badness 10000) in paragraph at lines 2243--2245
 []\TU/lmtt/m/n/10.95 Vamos criar uma variável para armazenar essa primeira expr
 essão para mostrar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2210--2212
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2255
 []\TU/lmtt/m/n/10.95 Podemos achar valores utilizando o método subs(). Novament
 e, devemos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2241--2244
+Underfull \hbox (badness 10000) in paragraph at lines 2284--2287
 []\TU/lmtt/m/n/10.95 Se tivermos uma expressão numérica não-inteira e quisermos
  achar a solução em
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2280
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2323
 []\TU/lmtt/m/n/10.95 Como viu acima, possivelmente há uma função do SymPy que r
 epresente uma
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2280
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2323
 \TU/lmtt/m/n/10.95 operação ou função matemática. Por exemplo, temos sqrt(), lo
 g(), exp(),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2280
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2323
 \TU/lmtt/m/n/10.95 sin() e etc. Quando sentir necessidade de utilizar uma dessa
 , tente antes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2280
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2323
 \TU/lmtt/m/n/10.95 de consultar a documentação. Caso não consiga ``adivinhar'',
  faça uma consulta
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2280.
+(babel)             in language  on input line 2323.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2280.
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2365
+(babel)             in language  on input line 2323.
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2408
 []\TU/lmtt/m/n/10.95 Além desses principais, ainda há trigsimp() e expand_trig(
 ) que simplificam
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2408
 \TU/lmtt/m/n/10.95 e expandem funções trigonométricas (a partir das identidades
  de adição de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2408
 \TU/lmtt/m/n/10.95 arco). E outras que fazem o mesmo para potências, logaritmos
  e outros tipos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2359--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2408
 \TU/lmtt/m/n/10.95 de funções. Nesse caso, acho que vale a pena dar uma olhada 
 na documentação.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2366--2368
+Underfull \hbox (badness 10000) in paragraph at lines 2409--2411
 []\TU/lmtt/m/n/10.95 Finalizando esse tópico inicial, temos como substituir uma
  função em termos de
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2398.
+(babel)             in language  on input line 2441.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2400--2404
+Underfull \hbox (badness 10000) in paragraph at lines 2443--2447
 \TU/lmtt/m/n/10.95 Ok, nós vimos como utilizar expressões. Mas, como tratamos e
 quações? Como
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2400--2404
+Underfull \hbox (badness 10000) in paragraph at lines 2443--2447
 \TU/lmtt/m/n/10.95 vimos no capítulo anterior = significa atribuição e == é uma
  operação booleana
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2404.
+(babel)             in language  on input line 2447.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2404.
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 2405--2409
+(babel)             in language  on input line 2447.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 2448--2452
 []\TU/lmtt/m/n/10.95 Para equações criamos uma classe Eq(). Não se preocupe com
  a nomenclatura, é
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2405--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2448--2452
 \TU/lmtt/m/n/10.95 só uma forma de criar um objeto do tipo Eq. Para criar esse 
 objeto, passamos
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2442.
+(babel)             in language  on input line 2485.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2444--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2487--2490
 \TU/lmtt/m/n/10.95 Como verificar igualdade entre duas expressões? O == só serv
 irá para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2444--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2487--2490
 \TU/lmtt/m/n/10.95 expressões identicas (não somente em valor, mas também nos t
 ermos expressos).
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2511.
+(babel)             in language  on input line 2554.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2513--2516
+Underfull \hbox (badness 10000) in paragraph at lines 2556--2559
 \TU/lmtt/m/n/10.95 Podemos, também utilizando solve() encontrar as soluções de 
 um sistema de
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2526.
+(babel)             in language  on input line 2569.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2526.
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 2535--2537
+(babel)             in language  on input line 2569.
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 2578--2580
 []\TU/lmtt/m/n/10.95 Caso esteja tentando resolver um sistema linear (como o ac
 ima), é possível
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2588.
+(babel)             in language  on input line 2631.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2590--2593
+Underfull \hbox (badness 10000) in paragraph at lines 2633--2636
 \TU/lmtt/m/n/10.95 É bem trivial trabalhar com matrizes no Sympy. De modo geral
 , basta criar um
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2590--2593
+Underfull \hbox (badness 10000) in paragraph at lines 2633--2636
 \TU/lmtt/m/n/10.95 objeto a partir da classe Matrix. E passamos uma lista de li
 stas, sendo cada
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2608--2610
+Underfull \hbox (badness 10000) in paragraph at lines 2651--2653
 []\TU/lmtt/m/n/10.95 E podemos manipulá-las normalmente, com as operações comun
 s. Além disso, há
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2632.
+(babel)             in language  on input line 2675.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2632.
-[24]
+(babel)             in language  on input line 2675.
+[21]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2727.
+(babel)             in language  on input line 2770.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2729--2731
+Underfull \hbox (badness 10000) in paragraph at lines 2772--2774
 \TU/lmtt/m/n/10.95 Utilizando o que aprendeu nesse capítulo, tente resolver os 
 seguintes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2736--2738
+Underfull \hbox (badness 10000) in paragraph at lines 2779--2781
 []\TU/lmtt/m/n/10.95 Encontre as raízes de cada uma das expressões abaixo. Depo
 is encontre um
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2742.
+(babel)             in language  on input line 2785.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2742.
-[25]
+(babel)             in language  on input line 2785.
+[22]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2788.
+(babel)             in language  on input line 2831.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2790--2794
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2837
 \TU/lmtt/m/n/10.95 De modo geral, o principal objetivo do curso é garantir que 
 seus alunos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2790--2794
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2837
 \TU/lmtt/m/n/10.95 estejam proeficientes no uso de SymPy no Cálculo. Na minha o
 pinião, esse é
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2790--2794
+Underfull \hbox (badness 10000) in paragraph at lines 2833--2837
 \TU/lmtt/m/n/10.95 o capítulo mais importante do curso. Dê seu máximo para abso
 rver o conteúdo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2795--2797
+Underfull \hbox (badness 10000) in paragraph at lines 2838--2840
 []\TU/lmtt/m/n/10.95 Antes de comerçarmos, certifique-se que fez as devidas imp
 ortações e
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2808.
+(babel)             in language  on input line 2851.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2810--2813
+Underfull \hbox (badness 10000) in paragraph at lines 2853--2856
 \TU/lmtt/m/n/10.95 Nós sabemos que o Cálculo é, genericamente, o estudo das mud
 anças. E nós
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2810--2813
+Underfull \hbox (badness 10000) in paragraph at lines 2853--2856
 \TU/lmtt/m/n/10.95 costumamos definir intervalos para trabalhar com nossas funç
 ões e expressões.
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2813.
+(babel)             in language  on input line 2856.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2813.
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 2814--2817
+(babel)             in language  on input line 2856.
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 2857--2860
 []\TU/lmtt/m/n/10.95 Para criar um intervalo, criamos um objeto a partir da cla
 sse Interval e/ou um
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2893.
+(babel)             in language  on input line 2936.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2895--2898
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2941
 \TU/lmtt/m/n/10.95 Existem diversas funções embutidas no SymPy para avaliar o c
 omportamento das
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2895--2898
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2941
 \TU/lmtt/m/n/10.95 funções/expressões ao longo de seu domínio ou de um interval
 o específico.
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2901.
+(babel)             in language  on input line 2944.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2939.
+(babel)             in language  on input line 2982.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2939.
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 2948--2950
+(babel)             in language  on input line 2982.
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 2991--2993
 []\TU/lmtt/m/n/10.95 Podemos verificar também se ela é estritamente crescente o
 u decrescente, ou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2989--2993
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3036
 []\TU/lmtt/m/n/10.95 Podemos também verificar se ela é monótona com is_monotoni
 c(). Para finalizar,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2989--2993
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3036
 \TU/lmtt/m/n/10.95 podemos verificar se há pontos (e quais são) com singularida
 des. Ou seja, que
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3009.
+(babel)             in language  on input line 3052.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3011--3017
+Underfull \hbox (badness 10000) in paragraph at lines 3054--3060
 \TU/lmtt/m/n/10.95 Assim como veremos posteriormente nas derivadas e nas integr
 ais, há duas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3011--3017
+Underfull \hbox (badness 10000) in paragraph at lines 3054--3060
 \TU/lmtt/m/n/10.95 formas de criar e calcular limites no SymPy. A primeria form
 a é através da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3011--3017
+Underfull \hbox (badness 10000) in paragraph at lines 3054--3060
 \TU/lmtt/m/n/10.95 classe Limit, que criará um limite e não calculará seu valor
 . Ou seja, utilize
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3011--3017
+Underfull \hbox (badness 10000) in paragraph at lines 3054--3060
 \TU/lmtt/m/n/10.95 ela para armazenar a expressão do limite. Caso queira soment
 e calcular o
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3069.
+(babel)             in language  on input line 3112.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3069.
-[28]
+(babel)             in language  on input line 3112.
+[25]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3118.
+(babel)             in language  on input line 3161.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3120--3123
+Underfull \hbox (badness 10000) in paragraph at lines 3163--3166
 \TU/lmtt/m/n/10.95 Assim com os limites, podemos criar a derivada (sem calculá-
 la) através da
  []
 
 
-Overfull \hbox (52.01192pt too wide) in paragraph at lines 3204--3205
+Overfull \hbox (52.01192pt too wide) in paragraph at lines 3247--3248
 []$\OT1/cmr/m/n/10.95 32 []$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3244.
+(babel)             in language  on input line 3287.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3244.
-[29]
+(babel)             in language  on input line 3287.
+[26]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3254.
+(babel)             in language  on input line 3297.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3256--3260
+Underfull \hbox (badness 10000) in paragraph at lines 3299--3303
 \TU/lmtt/m/n/10.95 Assim como os Limites e as Derivadas que vimos acima, podemo
 s criar uma
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3256--3260
+Underfull \hbox (badness 10000) in paragraph at lines 3299--3303
 \TU/lmtt/m/n/10.95 Integral através da classe Integral() caso queiramos ter som
 ente a expressão,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3256--3260
+Underfull \hbox (badness 10000) in paragraph at lines 3299--3303
 \TU/lmtt/m/n/10.95 e caso queiramos o resultado de uma Integral, basta utilizar
  a função
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3261--3264
+Underfull \hbox (badness 10000) in paragraph at lines 3304--3307
 []\TU/lmtt/m/n/10.95 O Sympy não acresce a constante de integração nas Integrai
 s Indefinidas, então
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3351.
+(babel)             in language  on input line 3394.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3354.
+(babel)             in language  on input line 3397.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3356--3358
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3401
 \TU/lmtt/m/n/10.95 Você pode utilizar o método series() em uma expressão para f
 azer sua expansão
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3364.
+(babel)             in language  on input line 3407.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3364.
-[30]
+(babel)             in language  on input line 3407.
+[27]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3375.
+(babel)             in language  on input line 3418.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3377--3381
+Underfull \hbox (badness 10000) in paragraph at lines 3420--3424
 \TU/lmtt/m/n/10.95 Ao criar uma função simbólica, você pode utilizar derivadas 
 e a função
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3377--3381
+Underfull \hbox (badness 10000) in paragraph at lines 3420--3424
 \TU/lmtt/m/n/10.95 dsolve() para encontrar a solução de uma expressão e ou equa
 ção diferencial.
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3413.
+(babel)             in language  on input line 3456.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3415--3417
+Underfull \hbox (badness 10000) in paragraph at lines 3458--3460
 \TU/lmtt/m/n/10.95 Como nos últimos capítulos, resolva os seguintes exercícios 
 com o que aprendeu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3432--3435
+Underfull \hbox (badness 10000) in paragraph at lines 3475--3478
 []\TU/lmtt/m/n/10.95 Sua derivada, os intervalos de crescimento e decrescimento
  de f,os pontos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3435--3437
+Underfull \hbox (badness 10000) in paragraph at lines 3478--3480
 []\TU/lmtt/m/n/10.95 Os intervalos onde o gráfico da f é côncavo para cima e on
 de é côncavo
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3451.
+(babel)             in language  on input line 3494.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3451.
-[31]
+(babel)             in language  on input line 3494.
+[28]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3471.
+(babel)             in language  on input line 3514.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3473--3479
+Underfull \hbox (badness 10000) in paragraph at lines 3516--3522
 \TU/lmtt/m/n/10.95 O uso de gráficos na matemática, principalmente no Cálculo e
  na Geometria
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3473--3479
+Underfull \hbox (badness 10000) in paragraph at lines 3516--3522
 \TU/lmtt/m/n/10.95 Analítica, é de extrema importância. Embora esse não seja o 
 foco do SymPy,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3473--3479
+Underfull \hbox (badness 10000) in paragraph at lines 3516--3522
 \TU/lmtt/m/n/10.95 é possível criar os chamados \TU/lmtt/m/it/10.95 plots \TU/l
 mtt/m/n/10.95 com certa facilidade. Inclusive, como
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3473--3479
+Underfull \hbox (badness 10000) in paragraph at lines 3516--3522
 \TU/lmtt/m/n/10.95 é utilizado o matplotlib para criar os gráficos, há uma gran
 de margem para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3493--3497
+Underfull \hbox (badness 10000) in paragraph at lines 3536--3540
 []\TU/lmtt/m/n/10.95 O seu uso é facilitado mais ainda pelo ambiente Jupyter, e
  podemos trabalhar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3493--3497
+Underfull \hbox (badness 10000) in paragraph at lines 3536--3540
 \TU/lmtt/m/n/10.95 com eles de forma semelhante ao que fora abordado no último 
 capítulo. Ou seja,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3493--3497
+Underfull \hbox (badness 10000) in paragraph at lines 3536--3540
 \TU/lmtt/m/n/10.95 podemos criar um objeto para trabalharmos com ele, e depois 
 ver o resultado.
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3510.
+(babel)             in language  on input line 3553.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3512--3515
+Underfull \hbox (badness 10000) in paragraph at lines 3555--3558
 \TU/lmtt/m/n/10.95 As duas primeiras funções que trabalharemos criam plots em 2
 D. Para fazer um
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3517.
+(babel)             in language  on input line 3560.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3524.
+(babel)             in language  on input line 3567.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3524.
-[32]
+(babel)             in language  on input line 3567.
+[29]
 File: full_files/full_214_0.png Graphic file (type bmp)
 <full_files/full_214_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3529--3530
+Underfull \hbox (badness 10000) in paragraph at lines 3572--3573
 
  []
 
 File: full_files/full_216_0.png Graphic file (type bmp)
 <full_files/full_216_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3549.
+(babel)             in language  on input line 3592.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3549.
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 3550--3551
+(babel)             in language  on input line 3592.
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 3593--3594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3559--3562
+Underfull \hbox (badness 10000) in paragraph at lines 3602--3605
 []\TU/lmtt/m/n/10.95 Obviamente, o gráfico acima está longe de ser o melhor pos
 sível. Mas com
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3559--3562
+Underfull \hbox (badness 10000) in paragraph at lines 3602--3605
 \TU/lmtt/m/n/10.95 apenas uma função fizemos algo relevante. Mas, se armazenarm
 os, note o que
  []
@@ -2204,53 +2219,53 @@ os, note o que
 File: full_files/full_218_0.png Graphic file (type bmp)
 <full_files/full_218_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3573.
+(babel)             in language  on input line 3616.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3573.
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 3574--3575
+(babel)             in language  on input line 3616.
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 3617--3618
 
  []
 
 File: full_files/full_220_0.png Graphic file (type bmp)
 <full_files/full_220_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3590--3591
+Underfull \hbox (badness 10000) in paragraph at lines 3633--3634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3592--3595
+Underfull \hbox (badness 10000) in paragraph at lines 3635--3638
 []\TU/lmtt/m/n/10.95 Estamos melhorando. Veja que my_plot armazena as funções e
 m sequência.
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3595.
+(babel)             in language  on input line 3638.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3595.
-[35]
+(babel)             in language  on input line 3638.
+[32]
 File: full_files/full_222_0.png Graphic file (type bmp)
 <full_files/full_222_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3610--3611
+Underfull \hbox (badness 10000) in paragraph at lines 3653--3654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3612--3617
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3660
 []\TU/lmtt/m/n/10.95 Acho que conseguimos um bom resultado. Contudo, você conco
 rda que é um
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3612--3617
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3660
 \TU/lmtt/m/n/10.95 pouco cansativo acessar cada um desses valores e ir alterand
 o, certo? E,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3612--3617
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3660
 \TU/lmtt/m/n/10.95 se não definíssemos os limites em $\OML/cmm/m/it/10.95 x$ \T
 U/lmtt/m/n/10.95 para $\OT1/cmr/m/n/10.95 [\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/
 10.95 10\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 10]$\TU/lmtt/m/n/10.95 , você 
@@ -2258,57 +2273,57 @@ veria que a função
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3612--3617
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3660
 \TU/lmtt/m/n/10.95 não continuaria. Isso ocorre pois não definimos o alcance de
  nosso plot ao
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3618--3620
+Underfull \hbox (badness 10000) in paragraph at lines 3661--3663
 []\TU/lmtt/m/n/10.95 Aliado a isso, é possível criar dois plots diferentes e un
 í-los com o método
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3621--3624
+Underfull \hbox (badness 10000) in paragraph at lines 3664--3667
 []\TU/lmtt/m/n/10.95 Com o que aprendemos podemos fazer, com um único comando, 
 um bom plot de uma
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3621--3624
+Underfull \hbox (badness 10000) in paragraph at lines 3664--3667
 \TU/lmtt/m/n/10.95 única função. Caso queiramos mais de uma (como fizemos acima
 ), basta alterar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3625--3628
+Underfull \hbox (badness 10000) in paragraph at lines 3668--3671
 []\TU/lmtt/m/n/10.95 Caso você conheça matplotlib, é possível utilizar todos os
  parâmetros para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3625--3628
+Underfull \hbox (badness 10000) in paragraph at lines 3668--3671
 \TU/lmtt/m/n/10.95 anotações e etc. Não abordarei isso aqui pois acredito que f
 oge do nosso
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3637.
+(babel)             in language  on input line 3680.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3637.
-[36]
+(babel)             in language  on input line 3680.
+[33]
 File: full_files/full_224_0.png Graphic file (type bmp)
 <full_files/full_224_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 3642--3643
+Underfull \hbox (badness 10000) in paragraph at lines 3685--3686
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3645.
+(babel)             in language  on input line 3688.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3647--3650
+Underfull \hbox (badness 10000) in paragraph at lines 3690--3693
 \TU/lmtt/m/n/10.95 Quando temos uma equação com variável implícita, utilizamos 
 a plot_implicit().
  []
@@ -2316,29 +2331,29 @@ a plot_implicit().
 File: full_files/full_226_0.png Graphic file (type bmp)
 <full_files/full_226_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3661.
+(babel)             in language  on input line 3704.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3661.
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 3662--3663
+(babel)             in language  on input line 3704.
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 3705--3706
 
  []
 
 File: full_files/full_228_0.png Graphic file (type bmp)
 <full_files/full_228_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3683.
+(babel)             in language  on input line 3726.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3683.
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 3684--3685
+(babel)             in language  on input line 3726.
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 3727--3728
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3694.
+(babel)             in language  on input line 3737.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3696--3698
+Underfull \hbox (badness 10000) in paragraph at lines 3739--3741
 \TU/lmtt/m/n/10.95 Utilizando funções de duas variáveis, nós conseguimos fazer 
 plots em 3d com a
  []
@@ -2346,137 +2361,137 @@ plots em 3d com a
 File: full_files/full_230_0.png Graphic file (type bmp)
 <full_files/full_230_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3709.
+(babel)             in language  on input line 3752.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3709.
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 3710--3711
+(babel)             in language  on input line 3752.
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 3753--3754
 
  []
 
 File: full_files/full_232_0.png Graphic file (type bmp)
 <full_files/full_232_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3730.
+(babel)             in language  on input line 3773.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3730.
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 3731--3732
+(babel)             in language  on input line 3773.
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 3774--3775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3740--3742
+Underfull \hbox (badness 10000) in paragraph at lines 3783--3785
 []\TU/lmtt/m/n/10.95 Além desses plots, há os plots paramétricos. Recomendo que
  dê uma olhada na
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3744.
+(babel)             in language  on input line 3787.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3750--3752
+Underfull \hbox (badness 10000) in paragraph at lines 3793--3795
 []\TU/lmtt/m/n/10.95 Faça o plot das seguintes funções, escolhendo os melhores 
 valores para os
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3760.
+(babel)             in language  on input line 3803.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3760.
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3769
+(babel)             in language  on input line 3803.
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 3810--3812
 []\TU/lmtt/m/n/10.95 Faça o plot das seguintes equações, escolhendo os melhores
  valores para os
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3780.
+(babel)             in language  on input line 3823.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3782--3788
+Underfull \hbox (badness 10000) in paragraph at lines 3825--3831
 \TU/lmtt/m/n/10.95 Como a principal intenção do curso é prepará-los para o uso 
 de SymPy nas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3782--3788
+Underfull \hbox (badness 10000) in paragraph at lines 3825--3831
 \TU/lmtt/m/n/10.95 disciplinas que envolvem Cálculo, ao finalizar o capítulo an
 terior você deve
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3782--3788
+Underfull \hbox (badness 10000) in paragraph at lines 3825--3831
 \TU/lmtt/m/n/10.95 estar pronto para resolver seus problemas utilizando esse mó
 dulo. Contudo, eu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3782--3788
+Underfull \hbox (badness 10000) in paragraph at lines 3825--3831
 \TU/lmtt/m/n/10.95 acredito que há muito a se falar sobre esse módulo. E, porta
 nto, esse capítulo
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3790.
+(babel)             in language  on input line 3833.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3796
+Underfull \hbox (badness 10000) in paragraph at lines 3835--3839
 \TU/lmtt/m/n/10.95 Isso mesmo, nós podemos resolver problemas de Geometria tant
 o de forma
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3796
+Underfull \hbox (badness 10000) in paragraph at lines 3835--3839
 \TU/lmtt/m/n/10.95 simbólica, como de forma numérica. A ideia principal não é f
 icar criando plots
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3796
+Underfull \hbox (badness 10000) in paragraph at lines 3835--3839
 \TU/lmtt/m/n/10.95 com o sistema completo, mas sim trabalhar matemáticamente (i
 ndo para o lado da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3797--3799
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3842
 []\TU/lmtt/m/n/10.95 Antes de começarmos essa seção e as próximas, faremos as d
 evidas importações e
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3811.
+(babel)             in language  on input line 3854.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3813--3816
+Underfull \hbox (badness 10000) in paragraph at lines 3856--3859
 \TU/lmtt/m/n/10.95 Começando pela geometria em 2D, podemos seguir o processo de
  criar os pontos,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3813--3816
+Underfull \hbox (badness 10000) in paragraph at lines 3856--3859
 \TU/lmtt/m/n/10.95 as linhas (a partir dos pontos) e as formas 2D a partir dos 
 segmentos. É bem
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3825.
+(babel)             in language  on input line 3868.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3825.
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 3843--3845
+(babel)             in language  on input line 3868.
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 3886--3888
 []\TU/lmtt/m/n/10.95 Contudo, o indicado é utilizar as classes, que já terão su
 as propriedades a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3976--3978
+Underfull \hbox (badness 10000) in paragraph at lines 4019--4021
 []\TU/lmtt/m/n/10.95 Podemos criar uma reta ao dar um ponto inicial e uma incli
 nação, lembrando
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3985.
+(babel)             in language  on input line 4028.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 3985.
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 4053--4055
+(babel)             in language  on input line 4028.
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 4096--4098
 []\TU/lmtt/m/n/10.95 Para plotar, de modo geral, fazemos o uso do que aprendemo
 s no último
  []
@@ -2484,161 +2499,161 @@ s no último
 File: full_files/full_259_0.png Graphic file (type bmp)
 <full_files/full_259_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4066--4067
+Underfull \hbox (badness 10000) in paragraph at lines 4109--4110
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4073.
+(babel)             in language  on input line 4116.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4073.
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 4075--4077
+(babel)             in language  on input line 4116.
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 4118--4120
 []\TU/lmtt/m/n/10.95 Podemos criar figuras geométricas e encontrar suas áreas e
  verficiar
  []
 
 
-Overfull \hbox (588.20229pt too wide) in paragraph at lines 4173--4174
+Overfull \hbox (588.20229pt too wide) in paragraph at lines 4216--4217
 []$[]$ 
  []
 
 
-Overfull \hbox (776.04393pt too wide) in paragraph at lines 4215--4216
+Overfull \hbox (776.04393pt too wide) in paragraph at lines 4258--4259
 []$[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4228.
+(babel)             in language  on input line 4271.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4228.
-[45]
-Overfull \hbox (310.15517pt too wide) in paragraph at lines 4328--4329
+(babel)             in language  on input line 4271.
+[42]
+Overfull \hbox (310.15517pt too wide) in paragraph at lines 4371--4372
 []$[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4408.
+(babel)             in language  on input line 4451.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4408.
-[46]
-Overfull \hbox (369.4636pt too wide) in paragraph at lines 4485--4486
+(babel)             in language  on input line 4451.
+[43]
+Overfull \hbox (369.4636pt too wide) in paragraph at lines 4528--4529
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4561--4564
+Underfull \hbox (badness 10000) in paragraph at lines 4604--4607
 []\TU/lmtt/m/n/10.95 Para finalizar com a Geometria, é importante relembrar que
  é possível fazer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4561--4564
+Underfull \hbox (badness 10000) in paragraph at lines 4604--4607
 \TU/lmtt/m/n/10.95 tudo isso com valores simbólicos. Por exemplo, um quadrado e
 m função de um
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4564.
+(babel)             in language  on input line 4607.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4564.
-[47]
+(babel)             in language  on input line 4607.
+[44]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4595.
+(babel)             in language  on input line 4638.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4597--4599
+Underfull \hbox (badness 10000) in paragraph at lines 4640--4642
 \TU/lmtt/m/n/10.95 Para a terceira dimensão, podemos utilizar os Pontos com trê
 s coordenadas para
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4661.
+(babel)             in language  on input line 4704.
 
-Overfull \hbox (52.922pt too wide) in paragraph at lines 4663--4667
+Overfull \hbox (52.922pt too wide) in paragraph at lines 4706--4710
 \TU/lmtt/m/n/10.95 Nós podemos analisar as tensões em vigas utilizando o sympy.
 physics.continuum_mechanics.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4663--4667
+Underfull \hbox (badness 10000) in paragraph at lines 4706--4710
 \TU/lmtt/m/n/10.95 Caso você procure aplicar carregamento em uma viga e então a
 valiar as reações
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4668--4670
+Underfull \hbox (badness 10000) in paragraph at lines 4711--4713
 []\TU/lmtt/m/n/10.95 Veja um exemplo (no caso, para fazer sentido, leva os mesm
 os valores de um
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4691.
+(babel)             in language  on input line 4734.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4691.
-[48]
+(babel)             in language  on input line 4734.
+[45]
 File: full_files/full_307_0.png Graphic file (type bmp)
 <full_files/full_307_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4738.
+(babel)             in language  on input line 4781.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4738.
- [49]
-Underfull \hbox (badness 10000) in paragraph at lines 4739--4740
+(babel)             in language  on input line 4781.
+ [46]
+Underfull \hbox (badness 10000) in paragraph at lines 4782--4783
 
  []
 
 File: full_files/full_308_0.png Graphic file (type bmp)
 <full_files/full_308_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4752--4753
+Underfull \hbox (badness 10000) in paragraph at lines 4795--4796
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4766.
+(babel)             in language  on input line 4809.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4766.
-[50]
+(babel)             in language  on input line 4809.
+[47]
 File: full_files/full_309_0.png Graphic file (type bmp)
 <full_files/full_309_0.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 4771--4772
+Underfull \hbox (badness 10000) in paragraph at lines 4814--4815
 
  []
 
 File: full_files/full_311_0.png Graphic file (type bmp)
 <full_files/full_311_0.png>
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4807.
+(babel)             in language  on input line 4850.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4807.
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 4808--4809
+(babel)             in language  on input line 4850.
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 4851--4852
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4815.
+(babel)             in language  on input line 4858.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 4815.
-[52]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4815.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4815.
+(babel)             in language  on input line 4858.
+[49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4858.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4858.
  (./full.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4815.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4815.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4858.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4858.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 34376 strings out of 494972
- 662200 string characters out of 6178093
- 772214 words of memory out of 5000000
- 37721 multiletter control sequences out of 15000+600000
+ 34389 strings out of 494972
+ 662338 string characters out of 6178093
+ 772321 words of memory out of 5000000
+ 37731 multiletter control sequences out of 15000+600000
  536809 words of font info for 64 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  54i,14n,73p,10394b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on full.pdf (52 pages).
+Output written on full.pdf (54 pages).
